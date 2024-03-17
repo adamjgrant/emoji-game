@@ -1,5 +1,5 @@
 const enter_key = '⮐';
-const delete_key = '🆇';
+const delete_key = ``;
 
 document.addEventListener('DOMContentLoaded', () => {
   // Define the rows of keys for a standard QWERTY keyboard
@@ -34,6 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (key === delete_key) {
         key_element.classList.add('backspace');
         key_element.id = 'backspace';
+        key_element.innerHTML = '<ion-icon name="backspace-outline"></ion-icon>';
       }
 
       // Append the cloned template to the current keyboard row
@@ -53,13 +54,18 @@ export class Keyboard {
   type(e, limit) {
     const key = e.target.textContent;
     // Update the entry string with the key that was pressed
+    console.log(key, e);
     if (key === enter_key) {
       this.last_entry = this.entry;
       this.entry = "";
       this.disable_enter_key();
       return true;
     }
-    if (key === delete_key) this.entry = this.entry.slice(0, -1);
+    if (key === "") {
+      if (e.target.id === "backspace") {
+        this.entry = this.entry.slice(0, -1);
+      }
+    }
     if (key !== enter_key && key !== delete_key) {
       if (this.entry.length < limit) this.entry = this.entry + key;
     }

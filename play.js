@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   keyboard.keys.forEach(key => {
     key.addEventListener('click', (e) => {
+      console.log(e.target);
       const enter_key_was_pressed = keyboard.type(e, todays_game.spacers.length);
       todays_game.entry = keyboard.entry;
       if (enter_key_was_pressed) {

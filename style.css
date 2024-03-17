@@ -92,7 +92,7 @@
 }
 
 .equation {
-  text-align: center;
+  text-align: right;
   font-size: 50px;
   display: block;
 }
@@ -184,6 +184,9 @@
   touch-action: manipulation;
 }
 
+.key.backspace ion-icon {
+  pointer-events: none;
+}
 
 .keyboard-row button.score-green {
   background: var(--green);
@@ -204,7 +207,8 @@
 
 .keyboard-row .enter,
 .keyboard-row .backspace {
-  font-size: 16px;
+  font-size: 22px;
+  line-height: 10px;
 }
 
 .keyboard-row button:hover {
@@ -237,10 +241,19 @@
   font-family: 'Rancho';
 }
 
+.curtain .equation.transparent {
+  opacity: 1;
+  margin-bottom: 7px;
+}
+
 @media (prefers-color-scheme: dark) {
   body {
     color: white;
     background: black;
+  }
+
+  curtain {
+    color: #333
   }
 
   @keyframes blink {
