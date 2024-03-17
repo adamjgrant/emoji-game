@@ -76,4 +76,10 @@ document.addEventListener('DOMContentLoaded', () => {
   if (!navigator.share) { 
     share_button.classList.add('hide');
   }
+
+  const play_again = document.getElementById("play-again");
+  play_again.addEventListener('click', () => {
+    disk.clear();
+    location.reload();
+  });
 });

@@ -15,5 +15,9 @@ export const disk = {
     let game = this.saved;
     game[prop] = value;
     this.save(game);
+  },
+
+  clear() {
+    localStorage.removeItem('game');
   }
 }
