@@ -110,7 +110,6 @@ export class Game {
         scored_letter.score = "green";
         this.set_text_message_for_round(true);
       } else if (word_answer_as_array.map(obj => obj.letter).includes(letter)) {
-        this.set_text_message_for_round(false);
         // Count the number of occurences of this letter in the word answer
         // Only mark this as yellow if there are fewer either green or yellow marked instances of this letter
         const appearances_of_this_letter = word_answer_as_array.filter(item => item.letter === letter).length;
@@ -120,6 +119,9 @@ export class Game {
           word_answer_as_array[index_of_first_non_yellow_or_green_instance_of_letter_in_word_answer_as_array].score = "yellow";
           scored_letter.score = "yellow";
         }
+        let any_green = word_answer_as_array.some(item => item.score === "green");
+        let any_yellow = word_answer_as_array.some(item => item.score === "yellow");
+        this.set_text_message_for_round(false, any_green, any_yellow);
       }
       scored_guess.push(scored_letter);
     });
@@ -127,8 +129,17 @@ export class Game {
     return scored_guess;
   }
 
-  set_text_message_for_round(got_it_right) {
-    this.text_message_object[`round-${this.active_round}`].push(got_it_right ? this.emoji_answer : "🟥");
+  set_text_message_for_round(got_it_right, any_green=false, any_yellow=false) {
+    if (this.text_message_object[`round-${this.active_round}`].length === 0) {
+      this.text_message_object[`round-${this.active_round}`].push(`+${this.second}`);
+    }
+    let stamp = "🟥";
+    if (any_green) {
+      stamp = "🟩";
+    } else if (any_yellow) {
+      stamp = "🟨";
+    }
+    this.text_message_object[`round-${this.active_round}`].push(stamp);
   }
 
   get clue_equals_element() {
@@ -283,12 +294,12 @@ export class Game {
   get text_message() {
     const human_readable_todays_date = new Date(this.date).toLocaleDateString("en-US", { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
     const text = `
-      ${human_readable_todays_date}:
       ${this.text_message_object["round-1"].join("")}
       ${this.text_message_object["round-2"].join("")}
       ${this.text_message_object["round-3"].join("")}
       ${this.text_message_object["round-4"].join("")}
       ${this.text_message_object["round-5"].join("")}
+      everything.io for ${human_readable_todays_date}
     `;
     const title = "I Played Everything";
     return { title, text };
