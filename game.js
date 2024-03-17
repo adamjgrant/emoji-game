@@ -322,6 +322,7 @@ ${this.text_message_object["round-5"].join("")}
 https://everything.io for ${human_readable_todays_date}
     `;
     const title = "I Played Everything";
-    return { title, text };
+    const url = "https://everything.io";
+    return { title, text, url };
   }
 }
