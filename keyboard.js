@@ -54,7 +54,6 @@ export class Keyboard {
   type(e, limit) {
     const key = e.target.textContent;
     // Update the entry string with the key that was pressed
-    console.log(key, e);
     if (key === enter_key) {
       this.last_entry = this.entry;
       this.entry = "";

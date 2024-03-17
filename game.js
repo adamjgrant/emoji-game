@@ -1,3 +1,5 @@
+import { disk } from "./disk.js";
+
 const TIME_TO_CELEBRATE = 2000;
 const MAX_NUMBER_OF_TRIES = 5;
 
@@ -6,7 +8,7 @@ export class Game {
     this.game = game;
     this.clue = game.clue;
     this.date = game.date;
-    this.active_round = 0;
+    this.active_round = 1;
     this.number_of_tries_in_round = 0;
     this.text_message_object = {
       "round-1": [],
@@ -15,10 +17,12 @@ export class Game {
       "round-4": [],
       "round-5": [],
     };
+    this.history = "";
   }
 
   increment_round() {
     this.active_round += 1;
+    disk.save_for_prop("active_round", this.active_round);
   }
 
   get game_emojis () {
@@ -44,7 +48,6 @@ export class Game {
   }
 
   set_up_round() {
-    this.increment_round();
     this.show_history();
     if (this.active_round > this.game_emojis.length) {
       return this.show_curtain();
@@ -108,7 +111,6 @@ export class Game {
       if (letter === word_answer_as_array[index].letter) {
         word_answer_as_array[index].score = "green";
         scored_letter.score = "green";
-        this.set_text_message_for_round(true);
       } else if (word_answer_as_array.map(obj => obj.letter).includes(letter)) {
         // Count the number of occurences of this letter in the word answer
         // Only mark this as yellow if there are fewer either green or yellow marked instances of this letter
@@ -119,27 +121,40 @@ export class Game {
           word_answer_as_array[index_of_first_non_yellow_or_green_instance_of_letter_in_word_answer_as_array].score = "yellow";
           scored_letter.score = "yellow";
         }
-        let any_green = word_answer_as_array.some(item => item.score === "green");
-        let any_yellow = word_answer_as_array.some(item => item.score === "yellow");
-        this.set_text_message_for_round(false, any_green, any_yellow);
       }
       scored_guess.push(scored_letter);
     });
 
+    let all_correct = word_answer_as_array.every(item => item.score === "green");
+    if (all_correct) {
+      this.set_text_message_for_round(true);
+    }
+    else {
+      let any_green = word_answer_as_array.some(item => item.score === "green");
+      let any_yellow = word_answer_as_array.some(item => item.score === "yellow");
+      this.set_text_message_for_round(false, any_green, any_yellow);
+    }
     return scored_guess;
   }
 
   set_text_message_for_round(got_it_right, any_green=false, any_yellow=false) {
+    console.log("pong");
     if (this.text_message_object[`round-${this.active_round}`].length === 0) {
       this.text_message_object[`round-${this.active_round}`].push(`+${this.second}`);
     }
     let stamp = "🟥";
-    if (any_green) {
-      stamp = "🟩";
-    } else if (any_yellow) {
-      stamp = "🟨";
+    if (got_it_right) {
+      stamp = "🏆";
+    }
+    else {
+      if (any_green) {
+        stamp = "🟩";
+      } else if (any_yellow) {
+        stamp = "🟨";
+      }
     }
     this.text_message_object[`round-${this.active_round}`].push(stamp);
+    disk.save_for_prop("text_message_object", this.text_message_object);
   }
 
   get clue_equals_element() {
@@ -164,6 +179,7 @@ export class Game {
     equation_copy.appendChild(answer_in_words);
     equation_copy.removeAttribute("id");
     history_zone.appendChild(equation_copy);
+    disk.save_for_prop("history", history_zone.innerHTML);
   }
 
   hide_history() {
@@ -206,7 +222,6 @@ export class Game {
     clue_equals_copy.removeAttribute("id");
     document.body.appendChild(clue_equals_copy);
     const clue_equals_copy_element = document.querySelector(".floating_clue");
-    console.log(document.querySelector(".floating_clue"));
     clue_equals_copy_element.style.left = `${x}px`;
     clue_equals_copy_element.style.top = `${y}px`;
 
@@ -249,6 +264,7 @@ export class Game {
     if (guess === this.word_answer) {
       setTimeout(() => {
         this.copy_clues_to_history();
+        this.increment_round();
         this.set_up_round();
       }, TIME_TO_CELEBRATE);
       this.show_answer();
@@ -257,6 +273,7 @@ export class Game {
     if (this.number_of_tries_in_round === MAX_NUMBER_OF_TRIES) {
       setTimeout(() => {
         this.copy_clues_to_history();
+        this.increment_round();
         this.set_up_round();
       }, TIME_TO_CELEBRATE);
       this.show_answer();
@@ -289,6 +306,9 @@ export class Game {
 
     // Show curtain
     curtain.classList.add("show");
+
+    // Experimenting.
+    curtain.querySelector("#history-copy").innerHTML = `<p>${this.text_message.text.replace(/\n/g, "</p><p>")}</p>`;
   }
 
   get text_message() {
