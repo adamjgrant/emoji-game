@@ -308,7 +308,7 @@ export class Game {
     curtain.classList.add("show");
 
     // Experimenting.
-    curtain.querySelector("#history-copy").innerHTML = `<p>${this.text_message.text.replace(/\n/g, "</p><p>")}</p>`;
+    // curtain.querySelector("#history-copy").innerHTML = `<p>${this.text_message.text.replace(/\n/g, "</p><p>")}</p>`;
   }
 
   get text_message() {
