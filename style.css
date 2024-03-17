@@ -3,6 +3,7 @@
 :root {
   --green: #bcef9a;
   --yellow: #efd667;
+  --link: #559829;
 }
 
 .interface {
@@ -92,7 +93,7 @@
 }
 
 .equation {
-  text-align: right;
+  text-align: center;
   font-size: 50px;
   display: block;
 }
@@ -244,6 +245,20 @@
 .curtain .equation.transparent {
   opacity: 1;
   margin-bottom: 7px;
+  text-align: right;
+}
+
+.share ion-icon {
+  pointer-events: none;
+}
+
+.share {
+  color: var(--link);
+  text-decoration: none;
+}
+
+.share.hide {
+  display: none;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -252,7 +267,7 @@
     background: black;
   }
 
-  curtain {
+  .curtain {
     color: #333
   }
 

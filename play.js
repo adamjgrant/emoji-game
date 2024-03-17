@@ -49,4 +49,12 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log("ping");
     todays_game.show_just_emoji_answer();
   });
+
+  const share_button = document.getElementById("share");
+  share_button.addEventListener('click', () => {
+    navigator.share(todays_game.text_message);
+  });
+  if (!navigator.share) { 
+    share_button.classList.add('hide');
+  }
 });

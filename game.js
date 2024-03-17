@@ -282,13 +282,15 @@ export class Game {
 
   get text_message() {
     const human_readable_todays_date = new Date(this.date).toLocaleDateString("en-US", { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
-    return `
+    const text = `
       ${human_readable_todays_date}:
       ${this.text_message_object["round-1"].join("")}
       ${this.text_message_object["round-2"].join("")}
       ${this.text_message_object["round-3"].join("")}
       ${this.text_message_object["round-4"].join("")}
       ${this.text_message_object["round-5"].join("")}
-    `
+    `;
+    const title = "I Played Everything";
+    return { title, text };
   }
 }
