@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="global.css">
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta http-equiv="cleartype" content="on">
+  <meta charset="utf-8">
+  <script type="module">
+    document.documentElement.classList.remove('no-js');
+    document.documentElement.classList.add('js');
+  </script>
+</head>
+<body>
+
+<template id="keyboard-key-template">
+  <button class="key">Q</button>
+</template>
+
+<template id="game-entry-spacer">
+  <div class="spacer"></div>
+</template>
+
+<div class="interface">
+  <div class="game-board">
+    <div class="equation" id="equation"><div class="clue" id="clue-first">...</div> + <div class="clue" id="clue-second">...</div> = <div class="clue" id="clue-equals">?</div></div>
+    <div class="tooltip" id="tooltip">Tap the ? to cheat</div>
+    <div class="entry-zone-holder" id="entry-zone-holder"></div><div class="entry-zone main" id="entry-zone"></div>
+    <div class="history-zone" id="history-zone"></div>
+  </div><p class="theme-hint"><em id="theme-hint"></em></p><div class="keyboard" id="keyboard">
+    <div class="keyboard-row" id="keyboard-row-1"></div><div class="keyboard-row" id="keyboard-row-2"></div><div class="keyboard-row" id="keyboard-row-3"></div>
+  </div>
+</div>
+  <script src="keyboard.js" type="module"></script>
+  <script src="game.js" type="module"></script>
+  <script src="games.js" type="module"></script>
+  <script src="play.js" type="module"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gorditas:wght@400;700&family=Rancho&display=swap" rel="stylesheet">
+  <div class="curtain" id="curtain">
+    <h1>That's all, folks</h1>
+    <div id="history-copy"></div>
+    <p>Come back tomorrow for a new game.</p>
+  </div>
+</body>
+</html>
