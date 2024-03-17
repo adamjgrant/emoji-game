@@ -299,6 +299,18 @@ export class Game {
     return scored_guess;
   }
 
+  auto_cheat() {
+    let number_of_letters_to_reveal = Math.floor(this.word_answer.length / 5.0)
+    // Pick that many random unique indexes of the word answer
+    let indexes = [];
+    while (indexes.length < number_of_letters_to_reveal) {
+      let index = Math.floor(Math.random() * this.word_answer.length);
+      if (!indexes.includes(index)) {
+        indexes.push(index);
+      }
+    }
+  }
+
   show_curtain() {
     const curtain = document.getElementById("curtain");
     // Copy the contents of #history-zone into #curtain
