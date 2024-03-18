@@ -147,5 +147,25 @@ export const games = [
     ["🔦", "🪪", "🙎‍♂️", "BOUNCER"],
     ["🙎‍♂️", "🔫", "👮", "OFFICER"]
   ]
+}, {
+  "date": "2024-03-30",
+  "clue": "Get Out the Vote",
+  "game": [
+    ["🌱", "☀️", "🌳", "TREE"],
+    ["🌳", "🪓", "🏠", "HOUSE"],
+    ["🏠", "🔌", "💡", "LIGHT"],
+    ["💡", "🍽️", "🍴", "HUNGRY"],
+    ["🍴", "💰", "👨‍⚖️", "POLITICIAN"]
+  ]
+}, {
+  "date": "2024-03-31",
+  "clue": "I'm ready to believe",
+  "game": [
+    ["🎵", "👂", "🎧", "HEADPHONES"],
+    ["🎧", "💻", "🎤", "PODCAST"],
+    ["🎤", "🌍", "📡", "BROADCAST"],
+    ["📡", "🌌", "👽", "ALIEN"],
+    ["👽", "🚗", "🛸", "UFO"]
+  ]
 }
 ]
