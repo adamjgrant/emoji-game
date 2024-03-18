@@ -356,7 +356,7 @@ ${this.text_message_object["round-2"].join("")}
 ${this.text_message_object["round-3"].join("")}
 ${this.text_message_object["round-4"].join("")}
 ${this.text_message_object["round-5"].join("")}
-https://everything.io for ${human_readable_todays_date}
+${human_readable_todays_date}
 #EverythingGame
     `.trim();
     const title = "I Played Everything";
