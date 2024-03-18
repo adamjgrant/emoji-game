@@ -25,11 +25,11 @@ export const games = [
   "date": "2024-03-18",
   "clue": "Called in for questioning",
   "game": [
-    ["🦇", "👨", "🦸", "HERO"],
+    ["🦇", "👨", "🦸", "BATMAN"],
     ["🦸", "🍞", "🥪", "SANDWICH"],
     ["🥪", "🪵", "📚", "BOOK"],
     ["📚", "🔨", "⚖️", "JUDGE"],
-    ["⚖️", "🍩", "👮", "COP"]
+    ["⚖️", "🍩", "👮", "OFFICER"]
   ]
 },
 {
