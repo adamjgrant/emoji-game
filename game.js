@@ -57,6 +57,7 @@ export class Game {
     this.set_up_round_spacers();
     this.blinking_cursor = 0;
     this.number_of_tries_in_round = 0;
+    this.auto_cheat();
   }
 
   get spacers() {
@@ -300,15 +301,25 @@ export class Game {
   }
 
   auto_cheat() {
-    let number_of_letters_to_reveal = Math.floor(this.word_answer.length / 5.0)
-    // Pick that many random unique indexes of the word answer
-    let indexes = [];
+    let number_of_letters_to_reveal = Math.ceil(this.word_answer.length / 5.0)
+    // Pick that many random unique indexes of the word answer but always use 
+    // the first character
+    let indexes = [0];
     while (indexes.length < number_of_letters_to_reveal) {
       let index = Math.floor(Math.random() * this.word_answer.length);
       if (!indexes.includes(index)) {
         indexes.push(index);
       }
     }
+
+    // Now apply a special class to each of those spacer characters to add a shadow
+    // of that letter
+    const entry_zone = document.getElementById("entry-zone");
+    const spacers = Array.from(entry_zone.querySelectorAll(".spacer"));
+    indexes.forEach(index => {
+      let letter_to_reveal = this.word_answer.split("")[index].toLowerCase();
+      spacers[index].classList.add(`shadow`, `shadow-${letter_to_reveal}`);
+    });
   }
 
   show_curtain() {
