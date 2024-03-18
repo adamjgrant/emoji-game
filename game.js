@@ -318,7 +318,7 @@ export class Game {
   auto_cheat() {
     let number_of_letters_to_reveal = Math.ceil(this.word_answer.length / 5.0)
     // Shadow the first and every fifth character
-    let indexes = [0]; // Start with the first index
+    let indexes = [number_of_letters_to_reveal > 4 ? 1 : 0]; // Start with the first index
 
     // Start from the fifth element (index 4, since arrays are zero-indexed) and then add every fifth element.
     for (let i = 4; i < this.word_answer.length; i += 5) {
