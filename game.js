@@ -58,6 +58,7 @@ export class Game {
     this.blinking_cursor = 0;
     this.number_of_tries_in_round = 0;
     this.auto_cheat();
+    document.getElementById("active-round").innerText = this.active_round;
   }
 
   get spacers() {
