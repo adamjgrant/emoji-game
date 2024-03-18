@@ -56,14 +56,19 @@
   border-radius: 3px;
   background: #EEE;
   margin: 0 4px; /* Optional: add some space between spacers */
-  height: 50px;
+}
+
+.entry-zone .spacer,
+.entry-zone.main .shadow:after {
   max-width: 40px;
+  height: 50px;
   padding: 3px;
   font-size: xxx-large;
   text-align: center;
   font-family: "Rancho", sans-serif;
   font-weight: 400; /* 400 or 700 */
   line-height:44px;
+  box-sizing: border-box;
 }
 
 .entry-zone .spacer.score-green {
@@ -283,41 +288,48 @@
 }
 
 /* Autocheat */
-.shadow:after {
+.entry-zone.main .shadow {
+  position: relative;
+}
+
+.entry-zone.main .shadow:after {
   content: 'A';
   display: block;
   height: 100%;
   width: 100%;
   opacity: 0.2;
-  pointer-events: none;;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
-.shadow.shadow-a:after { content: 'A'; }
-.shadow.shadow-b:after { content: 'B'; }
-.shadow.shadow-c:after { content: 'C'; }
-.shadow.shadow-d:after { content: 'D'; }
-.shadow.shadow-e:after { content: 'E'; }
-.shadow.shadow-f:after { content: 'F'; }
-.shadow.shadow-g:after { content: 'G'; }
-.shadow.shadow-h:after { content: 'H'; }
-.shadow.shadow-i:after { content: 'I'; }
-.shadow.shadow-j:after { content: 'J'; }
-.shadow.shadow-k:after { content: 'K'; }
-.shadow.shadow-l:after { content: 'L'; }
-.shadow.shadow-m:after { content: 'M'; }
-.shadow.shadow-n:after { content: 'N'; }
-.shadow.shadow-o:after { content: 'O'; }
-.shadow.shadow-p:after { content: 'P'; }
-.shadow.shadow-q:after { content: 'Q'; }
-.shadow.shadow-r:after { content: 'R'; }
-.shadow.shadow-s:after { content: 'S'; }
-.shadow.shadow-t:after { content: 'T'; }
-.shadow.shadow-u:after { content: 'U'; }
-.shadow.shadow-v:after { content: 'V'; }
-.shadow.shadow-w:after { content: 'W'; }
-.shadow.shadow-x:after { content: 'X'; }
-.shadow.shadow-y:after { content: 'Y'; }
-.shadow.shadow-z:after { content: 'Z'; }
+.entry-zone.main .shadow.shadow-a:after { content: 'A'; }
+.entry-zone.main .shadow.shadow-b:after { content: 'B'; }
+.entry-zone.main .shadow.shadow-c:after { content: 'C'; }
+.entry-zone.main .shadow.shadow-d:after { content: 'D'; }
+.entry-zone.main .shadow.shadow-e:after { content: 'E'; }
+.entry-zone.main .shadow.shadow-f:after { content: 'F'; }
+.entry-zone.main .shadow.shadow-g:after { content: 'G'; }
+.entry-zone.main .shadow.shadow-h:after { content: 'H'; }
+.entry-zone.main .shadow.shadow-i:after { content: 'I'; }
+.entry-zone.main .shadow.shadow-j:after { content: 'J'; }
+.entry-zone.main .shadow.shadow-k:after { content: 'K'; }
+.entry-zone.main .shadow.shadow-l:after { content: 'L'; }
+.entry-zone.main .shadow.shadow-m:after { content: 'M'; }
+.entry-zone.main .shadow.shadow-n:after { content: 'N'; }
+.entry-zone.main .shadow.shadow-o:after { content: 'O'; }
+.entry-zone.main .shadow.shadow-p:after { content: 'P'; }
+.entry-zone.main .shadow.shadow-q:after { content: 'Q'; }
+.entry-zone.main .shadow.shadow-r:after { content: 'R'; }
+.entry-zone.main .shadow.shadow-s:after { content: 'S'; }
+.entry-zone.main .shadow.shadow-t:after { content: 'T'; }
+.entry-zone.main .shadow.shadow-u:after { content: 'U'; }
+.entry-zone.main .shadow.shadow-v:after { content: 'V'; }
+.entry-zone.main .shadow.shadow-w:after { content: 'W'; }
+.entry-zone.main .shadow.shadow-x:after { content: 'X'; }
+.entry-zone.main .shadow.shadow-y:after { content: 'Y'; }
+.entry-zone.main .shadow.shadow-z:after { content: 'Z'; }
 
 @media screen and (min-width: 700px) {
   html {

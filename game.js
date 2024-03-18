@@ -302,14 +302,12 @@ export class Game {
 
   auto_cheat() {
     let number_of_letters_to_reveal = Math.ceil(this.word_answer.length / 5.0)
-    // Pick that many random unique indexes of the word answer but always use 
-    // the first character
-    let indexes = [0];
-    while (indexes.length < number_of_letters_to_reveal) {
-      let index = Math.floor(Math.random() * this.word_answer.length);
-      if (!indexes.includes(index)) {
-        indexes.push(index);
-      }
+    // Shadow the first and every fifth character
+    let indexes = [0]; // Start with the first index
+
+    // Start from the fifth element (index 4, since arrays are zero-indexed) and then add every fifth element.
+    for (let i = 4; i < this.word_answer.length; i += 5) {
+      indexes.push(i);
     }
 
     // Now apply a special class to each of those spacer characters to add a shadow
