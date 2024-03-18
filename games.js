@@ -1,6 +1,6 @@
 export const games = [
   {
-    "date": "2024-03-16",
+    "date": "2024-03-01",
     "clue": "Love is in the air",
     "game": [
       ["️☁️", "💧", "🌧️", "RAIN"],
@@ -33,7 +33,7 @@ export const games = [
   ]
 },
 {
-  "date": "2024-03-20",
+  "date": "2024-03-19",
   "clue": "Echoes of the Sea",
   "game": [
     ["🪰", "🧵", "👖", "JEANS"],
@@ -45,7 +45,7 @@ export const games = [
 },
 
   {
-  "date": "2024-03-19",
+  "date": "2024-03-20",
   "clue": "Not all heroes wear capes",
   "game": [
     ["🌽", "🔥", "🍿", "POPCORN"],
@@ -56,7 +56,7 @@ export const games = [
   ]
 },
 {
-  "date": "2024-03-20",
+  "date": "2024-03-21",
   "clue": "Journey of a T-Shirt",
   "game": [
     ["🌱", "☁️", "🌿", "COTTON"],
@@ -66,7 +66,7 @@ export const games = [
     ["👚", "💰", "🛍️", "SHOPPING"]
   ]
 },{
-  "date": "2024-03-21",
+  "date": "2024-03-22",
   "clue": "A Day Outdoors",
   "game": [
     ["🌞", "🌲", "🏞️", "PARK"],
@@ -76,7 +76,7 @@ export const games = [
     ["🍢", "🌌", "🔭", "STARGAZING"]
   ]
 }, {
-  "date": "2024-03-22",
+  "date": "2024-03-23",
   "clue": "Cycle of Water",
   "game": [
     ["☁️", "⛰️", "🏞️", "LAKE"],
@@ -86,18 +86,18 @@ export const games = [
     ["🌧️", "🌍", "🌱", "GROWTH"]
   ]
 },{
-    "date": "2024-03-23",
+    "date": "2024-03-24",
     "clue": "Tick-tock!",
     "game": [
       ["⏳", "⚙️", "🕰️", "CLOCK"],
       ["🕰️", "🔔", "⏰", "ALARM"],
       ["⏰", "🛏️", "🥱", "SLEEPY"],
-      ["🥱", "☕", "☀️","SUNRISE"],
-      ["☀️", "📅", "⏰", "SCHEDULE"]
+      ["🥱", "☕", "😳","AWAKE"],
+      ["😳", "📅", "💼", "WORK"]
     ]
   },
 {
-    "date": "2024-03-24",
+    "date": "2024-03-25",
     "clue": "Love is in the air",
     "game": [
       ["🍇", "⏲️", "🍷", "WINE"],
@@ -107,7 +107,7 @@ export const games = [
       ["👶", "📚", "🎓", "GRADUATION"]
     ]
   }, {
-  "date": "2024-03-25",
+  "date": "2024-03-26",
   "clue": "The Beginning",
   "game": [
     ["🐦", "🌳", "🥚", "NEST"],
@@ -117,7 +117,7 @@ export const games = [
     ["💩", "💧", "🌍", "EARTH"]
   ]
 }, {
-  "date": "2024-03-26",
+  "date": "2024-03-27",
   "clue": "Some Like It Hot",
   "game": [
     ["🧊", "🧊", "👶", "BABY"],
@@ -125,6 +125,27 @@ export const games = [
     ["🪙", "✋", "🎩", "MAGIC"],
     ["🎩", "⛄", "⛄", "FROSTY"],
     ["⛄", "🍅", "🍲", "GAZPACHO"]
+  ]
+},
+{
+  "date": "2024-03-28",
+  "clue": "Money isn't everything",
+  "game": [
+    ["🍪", "💻", "👨‍💼", "ADVERTISER"],
+    ["👨‍💼", "🍀", "🔮", "PSYCHIC"],
+    ["🔮", "💰", "🎰", "GAMBLER"],
+    ["🎰", "🕰️", "🪫", "BROKE"],
+    ["🪫", "🧑‍🎤", "💡", "STARTUP"]
+  ]
+}, {
+  "date": "2024-03-29",
+  "clue": "Basic Training",
+  "game": [
+    ["◼️", "🌞", "⚡", "ENERGY"],
+    ["⚡", "🪵", "🔥", "FIRE"],
+    ["🔥", "🔭", "🔦", "FLASHLIGHT"],
+    ["🔦", "🪪", "🙎‍♂️", "BOUNCER"],
+    ["🙎‍♂️", "🔫", "👮", "OFFICER"]
   ]
 }
 ]
