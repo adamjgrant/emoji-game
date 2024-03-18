@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
         e = { target: { id: "backspace", textContent: "" } };
     }
     if (event.key === "Enter") {
-        e = { target: { textContent: "⮐" } }
+        e = { target: { textContent: "SUBMIT" } }
         event.preventDefault();
         keyboard.type(e, todays_game.spacers.length)
         todays_game.entry = keyboard.entry;

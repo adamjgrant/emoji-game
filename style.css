@@ -1,8 +1,14 @@
+html, body, .interface {
+  height: 100svh;
+  max-height: 100svh;
+}
+
 body { 
   font-family: "Golos Text", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+  max-width: none;
 } 
 
 h1, h2, h3, {
@@ -21,6 +27,7 @@ h1, h2, h3, {
   white-space: pre;
   display: flex;
   flex-direction: column;
+  justify-content: stretch;
 }
 
 /* GAME BOARD */
@@ -172,6 +179,21 @@ h1, h2, h3, {
   justify-content: center;
   height: 25%;
   touch-action: manipulation;
+}
+
+#keyboard-row-1 button {
+  width: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  height: auto;
+}
+
+#keyboard-row-1 button:first-child {
+  background-color: var(--link);
+}
+
+#keyboard-row-1 button.score-disabled:first-child {
+  background-color: var(--link);
 }
 
 .keyboard-row button {
