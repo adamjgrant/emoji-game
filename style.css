@@ -240,7 +240,11 @@ h1, h2, h3, {
   display: none;
 }
 
-.curtain h1 { font-size: 55px; }
+.curtain h1 { 
+  font-size: 55px; 
+  text-align: center;
+  font-family: 'Rancho';
+}
 .curtain p { font-size: 28px; }
 
 .curtain.show { 
@@ -255,6 +259,8 @@ h1, h2, h3, {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 25px;
+  text-align: center;
 }
 
 .curtain .equation.transparent {
