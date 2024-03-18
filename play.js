@@ -2,6 +2,7 @@ import { Game } from "./game.js";
 import { games } from "./games.js";
 import { Keyboard } from "./keyboard.js";
 import { disk } from "./disk.js";
+import { CONST } from "./constants.js";
 
 // Function to format date to YYYY-MM-DD
 function formatDate(date) {
@@ -82,6 +83,12 @@ document.addEventListener('DOMContentLoaded', () => {
     location.reload();
   });
 
+  const idk_key = document.getElementById("idk");
+  idk_key.addEventListener('click', () => {
+    todays_game.show_just_emoji_answer();
+    todays_game.give_me_a_yellow(keyboard);
+  });
+
   // Allow for typing on desktop
   document.addEventListener('keyup', function(event) {
     // REFACTOR NEEDED: Copies implementation from keyboard.js and elsewhere to make this work the same way.
@@ -90,10 +97,10 @@ document.addEventListener('DOMContentLoaded', () => {
         e = {target: { textContent: event.key.toUpperCase() } }
     }
     if (event.key === "Backspace") {
-        e = { target: { id: "backspace", textContent: "" } };
+        e = { target: { id: "backspace", textContent: CONST.DELETE_KEY } };
     }
     if (event.key === "Enter") {
-        e = { target: { textContent: "Submit" } }
+        e = { target: { textContent: CONST.ENTER_KEY } }
         event.preventDefault();
         keyboard.type(e, todays_game.spacers.length)
         todays_game.entry = keyboard.entry;

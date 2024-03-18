@@ -1,11 +1,10 @@
-const enter_key = 'Submit';
-const delete_key = ``;
+import { CONST } from "./constants.js";
 
 document.addEventListener('DOMContentLoaded', () => {
   // Define the rows of keys for a standard QWERTY keyboard
   const rows = [
-    ['Submit', "I don't know!"],
-    ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', delete_key],
+    [CONST.ENTER_KEY, CONST.IDK_KEY],
+    ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', CONST.DELETE_KEY],
     ['A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L'],
     ['Z', 'X', 'C', 'V', 'B', 'N', 'M']
   ];
@@ -27,15 +26,19 @@ document.addEventListener('DOMContentLoaded', () => {
       clone.querySelector('button').textContent = key;
       const key_element = clone.querySelector('button')
 
-      if (key === enter_key) {
+      if (key === CONST.ENTER_KEY) {
         key_element.classList.add('enter', 'score-disabled');
         key_element.disabled = true;
         key_element.id = 'enter';
       }
-      if (key === delete_key) {
+      if (key === CONST.DELETE_KEY) {
         key_element.classList.add('backspace');
         key_element.id = 'backspace';
         key_element.innerHTML = '<ion-icon name="backspace-outline"></ion-icon>';
+      }
+      if (key === CONST.IDK_KEY) {
+        key_element.classList.add("idk");
+        key_element.id = "idk";
       }
 
       // Append the cloned template to the current keyboard row
@@ -55,7 +58,7 @@ export class Keyboard {
   type(e, limit) {
     const key = e.target.textContent;
     // Update the entry string with the key that was pressed
-    if (key === enter_key) {
+    if (key === CONST.ENTER_KEY) {
       this.last_entry = this.entry;
       this.entry = "";
       this.disable_enter_key();
@@ -66,7 +69,7 @@ export class Keyboard {
         this.entry = this.entry.slice(0, -1);
       }
     }
-    if (key !== enter_key && key !== delete_key) {
+    if (key !== CONST.ENTER_KEY && key !== CONST.DELETE_KEY) {
       if (this.entry.length < limit) this.entry = this.entry + key;
     }
     if (this.entry.length === limit) {

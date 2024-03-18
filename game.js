@@ -18,6 +18,7 @@ export class Game {
       "round-5": [],
     };
     this.history = "";
+    this.auto_cheat_indices = [];
   }
 
   increment_round() {
@@ -355,6 +356,7 @@ export class Game {
       let letter_to_reveal = this.word_answer.split("")[index].toLowerCase();
       spacers[index].classList.add(`shadow`, `shadow-${letter_to_reveal}`);
     });
+    this.auto_cheat_indices = indexes;
   }
 
   show_curtain() {
@@ -367,6 +369,74 @@ export class Game {
 
     // Experimenting.
     // curtain.querySelector("#history-copy").innerHTML = `<p>${this.text_message.text.replace(/\n/g, "</p><p>")}</p>`;
+  }
+
+  give_me_a_yellow(keyboard) {
+    console.log("Not implemented");
+    // submit a guess containing the shadowed letters and one other letter in the wrong position
+    // of if we can only put one in the right position, one green letter.
+
+    // Create an array that is the length of the word_answer and fill it with "X"
+    let yellow_guess = Array.from({ length: this.word_answer.length }, () => "X");
+
+    // Look at the last entry to keep any yellows or greens the user already had the last time
+    let scored_guess = this.score_guess(keyboard.last_entry);
+
+    // Iterate over X values only and replace ones that have scored guesses of either yellow or green
+    yellow_guess.forEach((letter, index) => {
+      if (letter === "X") {
+        let scored_letter = scored_guess[index];
+        if (scored_letter.score === "yellow" || scored_letter.score === "green") {
+          yellow_guess[index] = this.word_answer.split("")[index];
+        }
+      }
+    });
+
+    function randomSort(array) {
+      return array.sort(() => Math.random() - 0.5);
+    }
+
+    let indices;
+    // Replace the Xs with the letters that are shadowed
+    this.auto_cheat_indices.forEach(index => {
+      // Get possible yellow letters remaining
+      indices = yellow_guess.map((letter, index) => {
+        if (letter === "X") return index;
+      });
+      indices = randomSort(indices);
+    });
+      
+    // Find those letters in the word answer
+    let letters = indices.map(index => {
+      return this.word_answer.split("")[index];
+    });
+    letters = Array.from(new Set(letters));
+
+    let indexes_of_xs = yellow_guess.map((letter, index) => {
+      if (letter === "X") return index;
+    });
+
+    // Iterate until you find one that can be put in the wrong position
+    let _yellow_index;
+    letters.forEach((letter) => {
+      let index = yellow_guess.forEach((item, index) => {
+        let yellow_index;
+        let is_x = item === "X";
+        let letter_exists_here = this.word_answer.split("")[index] === letter;
+        // TODO can find a different index where it is an x and this letter be yellow
+        let _available_indices = indexes_of_xs.filter(item => item !== index);
+        _available_indices = _available_indices.filter(index => {
+          return this.word_answer[index] !== letter;
+        });
+        if (_available_indices.length > 0) yellow_index = _available_indices[0];
+        if (is_x && letter_exists_here && yellow_index !== undefined) {
+          _yellow_index = yellow_index;
+          // TODO: End this loop?
+        }
+      });
+    });
+
+    // Simulate typing it out
   }
 
   get text_message() {
