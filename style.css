@@ -1,3 +1,14 @@
+body { 
+  font-family: "Golos Text", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+} 
+
+h1, h2, h3, {
+  font-family: 'Rancho';
+}
+
 * { box-sizing: border-box; }
 
 :root {
@@ -244,7 +255,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-family: 'Rancho';
 }
 
 .curtain .equation.transparent {
