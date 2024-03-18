@@ -19,7 +19,6 @@ h1, h2, h3, {
 
 .interface {
   white-space: pre;
-  font-family: monospace;
   display: flex;
   flex-direction: column;
 }
