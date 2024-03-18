@@ -82,4 +82,29 @@ document.addEventListener('DOMContentLoaded', () => {
     disk.clear();
     location.reload();
   });
+
+  // Allow for typing on desktop
+  document.addEventListener('keyup', function(event) {
+    // REFACTOR NEEDED: Copies implementation from keyboard.js and elsewhere to make this work the same way.
+    let e = undefined ;
+    if (event.key.match(/^[a-z]$/i)) {
+        e = {target: { textContent: event.key.toUpperCase() } }
+    }
+    if (event.key === "Backspace") {
+        e = { target: { id: "backspace", textContent: "" } };
+    }
+    if (event.key === "Enter") {
+        e = { target: { textContent: "⮐" } }
+        event.preventDefault();
+        keyboard.type(e, todays_game.spacers.length)
+        todays_game.entry = keyboard.entry;
+        let scored_guess = todays_game.submit_guess(keyboard.last_entry);
+        return keyboard.score_keys(scored_guess);
+    }
+    if (e) {
+      event.preventDefault();
+      keyboard.type(e, todays_game.spacers.length)
+      todays_game.entry = keyboard.entry;
+    }
+  });
 });

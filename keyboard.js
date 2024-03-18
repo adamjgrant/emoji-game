@@ -55,6 +55,7 @@ export class Keyboard {
     const key = e.target.textContent;
     // Update the entry string with the key that was pressed
     if (key === enter_key) {
+      console.log("ping");
       this.last_entry = this.entry;
       this.entry = "";
       this.disable_enter_key();

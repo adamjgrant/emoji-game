@@ -139,7 +139,6 @@ export class Game {
   }
 
   set_text_message_for_round(got_it_right, any_green=false, any_yellow=false) {
-    console.log("pong");
     if (this.text_message_object[`round-${this.active_round}`].length === 0) {
       this.text_message_object[`round-${this.active_round}`].push(`+${this.second}`);
     }
