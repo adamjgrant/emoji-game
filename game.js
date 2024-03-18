@@ -125,6 +125,22 @@ export class Game {
       }
       scored_guess.push(scored_letter);
     });
+    // A green letter could be at the end of the word and the only one in the word.
+    // If that letter also appeared before it, it would be erroneously marked as yellow.
+    let green_items_in_scored_guess = scored_guess.filter(item => item.score === "green");
+    let yellow_items_in_scored_guess = scored_guess.filter(item => item.score === "yellow");
+    let unique_letters_in_yellow_items = Array.from(new Set(yellow_items_in_scored_guess.map(item => item.letter)));
+    unique_letters_in_yellow_items.forEach(letter => {
+      const appearances_of_this_letter = word_answer_as_array.filter(item => item.letter === letter).length;
+      const green_instances_of_letter = green_items_in_scored_guess.filter(item => item.letter === letter).length;
+      const yellow_instances_of_letter = yellow_items_in_scored_guess.filter(item => item.letter === letter).length;
+      const expected_yellow_instances_of_letter = appearances_of_this_letter - green_instances_of_letter;
+      let corrections_to_make = yellow_instances_of_letter - expected_yellow_instances_of_letter;
+      for (let x = 0; x < corrections_to_make; x++) {
+        const index_of_first_yellow_instance_of_letter_in_scored_guess = scored_guess.findIndex(item => item.letter === letter && item.score === "yellow");
+        scored_guess[index_of_first_yellow_instance_of_letter_in_scored_guess].score = "disabled";
+      }
+    });
 
     let all_correct = word_answer_as_array.every(item => item.score === "green");
     if (all_correct) {
