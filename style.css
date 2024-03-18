@@ -293,7 +293,7 @@
 }
 
 .entry-zone.main .shadow:after {
-  content: 'A';
+  content: '';
   display: block;
   height: 100%;
   width: 100%;
@@ -304,32 +304,32 @@
   left: 0;
 }
 
-.entry-zone.main .shadow.shadow-a:after { content: 'A'; }
-.entry-zone.main .shadow.shadow-b:after { content: 'B'; }
-.entry-zone.main .shadow.shadow-c:after { content: 'C'; }
-.entry-zone.main .shadow.shadow-d:after { content: 'D'; }
-.entry-zone.main .shadow.shadow-e:after { content: 'E'; }
-.entry-zone.main .shadow.shadow-f:after { content: 'F'; }
-.entry-zone.main .shadow.shadow-g:after { content: 'G'; }
-.entry-zone.main .shadow.shadow-h:after { content: 'H'; }
-.entry-zone.main .shadow.shadow-i:after { content: 'I'; }
-.entry-zone.main .shadow.shadow-j:after { content: 'J'; }
-.entry-zone.main .shadow.shadow-k:after { content: 'K'; }
-.entry-zone.main .shadow.shadow-l:after { content: 'L'; }
-.entry-zone.main .shadow.shadow-m:after { content: 'M'; }
-.entry-zone.main .shadow.shadow-n:after { content: 'N'; }
-.entry-zone.main .shadow.shadow-o:after { content: 'O'; }
-.entry-zone.main .shadow.shadow-p:after { content: 'P'; }
-.entry-zone.main .shadow.shadow-q:after { content: 'Q'; }
-.entry-zone.main .shadow.shadow-r:after { content: 'R'; }
-.entry-zone.main .shadow.shadow-s:after { content: 'S'; }
-.entry-zone.main .shadow.shadow-t:after { content: 'T'; }
-.entry-zone.main .shadow.shadow-u:after { content: 'U'; }
-.entry-zone.main .shadow.shadow-v:after { content: 'V'; }
-.entry-zone.main .shadow.shadow-w:after { content: 'W'; }
-.entry-zone.main .shadow.shadow-x:after { content: 'X'; }
-.entry-zone.main .shadow.shadow-y:after { content: 'Y'; }
-.entry-zone.main .shadow.shadow-z:after { content: 'Z'; }
+.entry-zone.main :empty.shadow.shadow-a:after { content: 'A'; }
+.entry-zone.main :empty.shadow.shadow-b:after { content: 'B'; }
+.entry-zone.main :empty.shadow.shadow-c:after { content: 'C'; }
+.entry-zone.main :empty.shadow.shadow-d:after { content: 'D'; }
+.entry-zone.main :empty.shadow.shadow-e:after { content: 'E'; }
+.entry-zone.main :empty.shadow.shadow-f:after { content: 'F'; }
+.entry-zone.main :empty.shadow.shadow-g:after { content: 'G'; }
+.entry-zone.main :empty.shadow.shadow-h:after { content: 'H'; }
+.entry-zone.main :empty.shadow.shadow-i:after { content: 'I'; }
+.entry-zone.main :empty.shadow.shadow-j:after { content: 'J'; }
+.entry-zone.main :empty.shadow.shadow-k:after { content: 'K'; }
+.entry-zone.main :empty.shadow.shadow-l:after { content: 'L'; }
+.entry-zone.main :empty.shadow.shadow-m:after { content: 'M'; }
+.entry-zone.main :empty.shadow.shadow-n:after { content: 'N'; }
+.entry-zone.main :empty.shadow.shadow-o:after { content: 'O'; }
+.entry-zone.main :empty.shadow.shadow-p:after { content: 'P'; }
+.entry-zone.main :empty.shadow.shadow-q:after { content: 'Q'; }
+.entry-zone.main :empty.shadow.shadow-r:after { content: 'R'; }
+.entry-zone.main :empty.shadow.shadow-s:after { content: 'S'; }
+.entry-zone.main :empty.shadow.shadow-t:after { content: 'T'; }
+.entry-zone.main :empty.shadow.shadow-u:after { content: 'U'; }
+.entry-zone.main :empty.shadow.shadow-v:after { content: 'V'; }
+.entry-zone.main :empty.shadow.shadow-w:after { content: 'W'; }
+.entry-zone.main :empty.shadow.shadow-x:after { content: 'X'; }
+.entry-zone.main :empty.shadow.shadow-y:after { content: 'Y'; }
+.entry-zone.main :empty.shadow.shadow-z:after { content: 'Z'; }
 
 @media screen and (min-width: 700px) {
   html {
@@ -371,5 +371,9 @@
 
   .keyboard-row button {
     width: calc(9.5% - var(--button-margin) * 2); /* Adjusted width to fit 10 buttons per row */
+  }
+
+  .entry-zone.main .shadow:after {
+    opacity: 0.35;
   }
 }
