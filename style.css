@@ -282,6 +282,43 @@
   }
 }
 
+/* Autocheat */
+.shadow:after {
+  content: 'A';
+  display: block;
+  height: 100%;
+  width: 100%;
+  opacity: 0.2;
+  pointer-events: none;;
+}
+
+.shadow.shadow-a:after { content: 'A'; }
+.shadow.shadow-b:after { content: 'B'; }
+.shadow.shadow-c:after { content: 'C'; }
+.shadow.shadow-d:after { content: 'D'; }
+.shadow.shadow-e:after { content: 'E'; }
+.shadow.shadow-f:after { content: 'F'; }
+.shadow.shadow-g:after { content: 'G'; }
+.shadow.shadow-h:after { content: 'H'; }
+.shadow.shadow-i:after { content: 'I'; }
+.shadow.shadow-j:after { content: 'J'; }
+.shadow.shadow-k:after { content: 'K'; }
+.shadow.shadow-l:after { content: 'L'; }
+.shadow.shadow-m:after { content: 'M'; }
+.shadow.shadow-n:after { content: 'N'; }
+.shadow.shadow-o:after { content: 'O'; }
+.shadow.shadow-p:after { content: 'P'; }
+.shadow.shadow-q:after { content: 'Q'; }
+.shadow.shadow-r:after { content: 'R'; }
+.shadow.shadow-s:after { content: 'S'; }
+.shadow.shadow-t:after { content: 'T'; }
+.shadow.shadow-u:after { content: 'U'; }
+.shadow.shadow-v:after { content: 'V'; }
+.shadow.shadow-w:after { content: 'W'; }
+.shadow.shadow-x:after { content: 'X'; }
+.shadow.shadow-y:after { content: 'Y'; }
+.shadow.shadow-z:after { content: 'Z'; }
+
 @media screen and (min-width: 700px) {
   html {
     width: 100svw;
