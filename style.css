@@ -164,6 +164,7 @@ h1, h2, h3, {
   height: 33.3svh;
   max-height: 33.3svh;
   width: 100vw;
+  min-height: 33.3svh;
 }
 
 .keyboard-row {
@@ -346,6 +347,19 @@ h1, h2, h3, {
 .entry-zone.main :empty.shadow.shadow-y:after { content: 'Y'; }
 .entry-zone.main :empty.shadow.shadow-z:after { content: 'Z'; }
 
+.between-round-text {
+  display: none;
+  font-family: "Golos Text", sans-serif;
+  font-size: 20px;
+  text-align: center;
+  margin: 25px 0;
+  color: #559829;
+}
+
+.between-round-text.show {
+  display: block;
+}
+
 @media screen and (min-width: 700px) {
   html {
     width: 100svw;
@@ -382,6 +396,7 @@ h1, h2, h3, {
     height: 33%;
     max-height: 33.3%;
     width: 100%;
+    min-height: 33%;
   }
 
   .keyboard-row button {

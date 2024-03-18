@@ -47,7 +47,27 @@ export class Game {
     return answer;
   }
 
+  show_between_round_text() {
+    const DURATION = 4000;
+    const DELAY = 2000;
+    const rounds_remaining_text = document.getElementById("rounds-remaining");
+    rounds_remaining_text.innerText = 5 - this.active_round;
+    const brt = document.getElementById("between-round-text");
+    setTimeout(() => {
+      brt.classList.add("show", "animate__animated", "animate__bounceIn");
+      setTimeout(() => {
+        brt.classList.remove("animate__bounceIn");
+        brt.classList.add("animate__bounceOut");
+        setTimeout(() => {
+          brt.classList.remove("animate__animated");
+          brt.classList.remove("show");
+        }, DELAY);
+      }, DURATION);
+    }, DELAY);
+  }
+
   set_up_round() {
+    this.show_between_round_text();
     this.show_history();
     if (this.active_round > this.game_emojis.length) {
       return this.show_curtain();
