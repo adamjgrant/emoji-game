@@ -192,10 +192,6 @@ h1, h2, h3, {
   background-color: var(--link);
 }
 
-#keyboard-row-1 button.score-disabled:first-child {
-  background-color: var(--link);
-}
-
 .keyboard-row button {
   --button-margin: 3px;
   margin: 0;
@@ -239,7 +235,8 @@ h1, h2, h3, {
 
 .keyboard-row button.score-disabled, 
 .keyboard-row button[disabled]:hover,
-.keyboard-row button[disabled]:active {
+.keyboard-row button[disabled]:active,
+#keyboard-row-1 button.score-disabled:first-child {
   background: #CCC;
   color: #999;
 }

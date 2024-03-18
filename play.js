@@ -65,7 +65,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const clue_equals = document.getElementById("clue-equals")
   clue_equals.addEventListener('click', () => {
-    console.log("ping");
     todays_game.show_just_emoji_answer();
   });
 
@@ -94,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
         e = { target: { id: "backspace", textContent: "" } };
     }
     if (event.key === "Enter") {
-        e = { target: { textContent: "SUBMIT" } }
+        e = { target: { textContent: "Submit" } }
         event.preventDefault();
         keyboard.type(e, todays_game.spacers.length)
         todays_game.entry = keyboard.entry;

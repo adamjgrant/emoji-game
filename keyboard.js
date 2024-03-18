@@ -1,13 +1,13 @@
-const enter_key = 'SUBMIT';
+const enter_key = 'Submit';
 const delete_key = ``;
 
 document.addEventListener('DOMContentLoaded', () => {
   // Define the rows of keys for a standard QWERTY keyboard
   const rows = [
     ['Submit', "I don't know!"],
-    ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P'],
+    ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', delete_key],
     ['A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L'],
-    [enter_key, 'Z', 'X', 'C', 'V', 'B', 'N', 'M', delete_key]
+    ['Z', 'X', 'C', 'V', 'B', 'N', 'M']
   ];
 
   // Get the template element
@@ -56,7 +56,6 @@ export class Keyboard {
     const key = e.target.textContent;
     // Update the entry string with the key that was pressed
     if (key === enter_key) {
-      console.log("ping");
       this.last_entry = this.entry;
       this.entry = "";
       this.disable_enter_key();
