@@ -58,6 +58,7 @@ export class Keyboard {
   type(e, limit) {
     const key = e.target.textContent;
     // Update the entry string with the key that was pressed
+    if (key === CONST.IDK_KEY) { return }
     if (key === CONST.ENTER_KEY) {
       this.last_entry = this.entry;
       this.entry = "";

@@ -1,4 +1,5 @@
 import { disk } from "./disk.js";
+import { CONST } from "./constants.js";
 
 const TIME_TO_CELEBRATE = 2000;
 const MAX_NUMBER_OF_TRIES = 5;
@@ -372,7 +373,6 @@ export class Game {
   }
 
   give_me_a_yellow(keyboard) {
-    console.log("Not implemented");
     // submit a guess containing the shadowed letters and one other letter in the wrong position
     // of if we can only put one in the right position, one green letter.
 
@@ -383,14 +383,16 @@ export class Game {
     let scored_guess = this.score_guess(keyboard.last_entry);
 
     // Iterate over X values only and replace ones that have scored guesses of either yellow or green
-    yellow_guess.forEach((letter, index) => {
-      if (letter === "X") {
-        let scored_letter = scored_guess[index];
-        if (scored_letter.score === "yellow" || scored_letter.score === "green") {
-          yellow_guess[index] = this.word_answer.split("")[index];
+    if (scored_guess.length) {
+      yellow_guess.forEach((letter, index) => {
+        if (letter === "X") {
+          let scored_letter = scored_guess[index];
+          if (scored_letter.score === "yellow" || scored_letter.score === "green") {
+            yellow_guess[index] = this.word_answer.split("")[index];
+          }
         }
-      }
-    });
+      });
+    }
 
     function randomSort(array) {
       return array.sort(() => Math.random() - 0.5);
@@ -423,7 +425,6 @@ export class Game {
         let yellow_index;
         let is_x = item === "X";
         let letter_exists_here = this.word_answer.split("")[index] === letter;
-        // TODO can find a different index where it is an x and this letter be yellow
         let _available_indices = indexes_of_xs.filter(item => item !== index);
         _available_indices = _available_indices.filter(index => {
           return this.word_answer[index] !== letter;
@@ -436,7 +437,21 @@ export class Game {
       });
     });
 
-    // Simulate typing it out
+    if (_yellow_index !== undefined) {
+      keyboard.entry = "";
+      yellow_guess[_yellow_index] = this.word_answer.split("")[_yellow_index];
+
+      console.log(yellow_guess);
+
+      // Simulate typing it out
+      yellow_guess.forEach((letter, index) => {
+        keyboard.type({ target: { textContent: letter } }, this.word_answer.length); 
+        this.entry = keyboard.entry;
+      });
+      keyboard.type({ target: { textContent: CONST.ENTER_KEY } }, this.word_answer.length);
+      scored_guess = this.submit_guess(keyboard.last_entry);
+      keyboard.score_keys(scored_guess);
+    }
   }
 
   get text_message() {
