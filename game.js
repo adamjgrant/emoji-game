@@ -394,6 +394,7 @@ export class Game {
         }
       });
     }
+    console.log("#", yellow_guess);
 
     function randomSort(array) {
       return array.sort(() => Math.random() - 0.5);
@@ -403,8 +404,9 @@ export class Game {
     // Replace the Xs with the letters that are shadowed
     this.auto_cheat_indices.forEach(index => {
       // Get possible yellow letters remaining
-      indices = yellow_guess.map((letter, index) => {
-        if (letter === "X") return index;
+      indices = yellow_guess.map((letter, _index) => {
+        if (_index === index) yellow_guess[index] = this.word_answer.split("")[index];
+        if (letter === "X") return _index;
       });
       indices = randomSort(indices);
     });
