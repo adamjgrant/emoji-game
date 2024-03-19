@@ -394,7 +394,6 @@ export class Game {
         }
       });
     }
-    console.log("#", yellow_guess);
 
     function randomSort(array) {
       return array.sort(() => Math.random() - 0.5);
@@ -406,7 +405,7 @@ export class Game {
       // Get possible yellow letters remaining
       indices = yellow_guess.map((letter, _index) => {
         if (_index === index) yellow_guess[index] = this.word_answer.split("")[index];
-        if (letter === "X") return _index;
+        else if (letter === "X") return _index;
       });
       indices = randomSort(indices);
     });
@@ -422,26 +421,21 @@ export class Game {
     });
 
     // Iterate until you find one that can be put in the wrong position
-    let _yellow_index;
-    letters.forEach((letter) => {
-      let index = yellow_guess.forEach((item, index) => {
-        let yellow_index;
-        let is_x = item === "X";
-        let letter_exists_here = this.word_answer.split("")[index] === letter;
-        let _available_indices = indexes_of_xs.filter(item => item !== index);
-        _available_indices = _available_indices.filter(index => {
-          return this.word_answer[index] !== letter;
-        });
-        if (_available_indices.length > 0) yellow_index = _available_indices[0];
-        if (is_x && letter_exists_here && yellow_index !== undefined) {
-          _yellow_index = yellow_index;
-        }
-      });
-    });
+    const find_wrong_index_of_letter_in_word_answer = (letters) => {
+      if (letters.length === 0) return;
+      let letter = letters.shift();
+      let wrong_index = indexes_of_xs.find(index => this.word_answer.split("")[index] !== letter);
+      if (wrong_index !== undefined) {
+        return [letter, wrong_index];
+      } else {
+        return find_wrong_index_of_letter_in_word_answer(letters);
+      }
+    }
+    const [letter, yellow_index] = find_wrong_index_of_letter_in_word_answer(letters);
 
-    if (_yellow_index !== undefined) {
+    if (yellow_index !== undefined) {
       keyboard.entry = "";
-      yellow_guess[_yellow_index] = this.word_answer.split("")[_yellow_index];
+      yellow_guess[yellow_index] = letter;
 
       console.log(yellow_guess);
 
@@ -455,7 +449,6 @@ export class Game {
       scored_guess = this.submit_guess(keyboard.last_entry);
       keyboard.score_keys(scored_guess);
     }
-    return keyboard;
   }
 
   get text_message() {
