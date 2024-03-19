@@ -197,5 +197,15 @@ export const games = [
     ["🐺", "🎾", "🐕", "DOG"],
     ["🐕", "🔥", "🌭", "HOT DOG"]
   ]
+}, {
+  "date": "2024-04-04",
+  "clue": "From Festivity to Fantasy",
+  "game": [
+    ["🦨", "🐄", "🧀", "CHEESE"],
+    ["🧀", "✍️", "📜", "POEM"],
+    ["📜", "📜", "🧻", "TOILET PAPER"],
+    ["🧻", "🏠", "🎃", "HALLOWEEN"],
+    ["🎃", "🦇", "🧛", "DRACULA"]
+  ]
 }
 ]
