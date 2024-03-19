@@ -177,5 +177,25 @@ export const games = [
     ["❤️", "🍽️", "⭐", "REVIEW"],
     ["⭐", "🎥", "👍", "THUMBS UP"]
   ]
+}, {
+  "date": "2024-04-02",
+  "clue": "From Creation to Legacy",
+  "game": [
+    ["📦", "🛹", "🚗", "CAR"],
+    ["🚗", "🇩🇪", "🪲", "BEETLE"],
+    ["🪲", "🎸", "🎤", "MUSICIAN"],
+    ["🎤", "🎟️", "💰", "MONEY"],
+    ["💰", "🎨", "🖼️", "GALLERY"]
+  ]
+}, {
+  "date": "2024-04-03",
+  "clue": "From Beats to Peaks",
+  "game": [
+    ["🎸", "🥁", "🪨", "ROCK"],
+    ["🪨", "🌍", "⛰️", "MOUNTAIN"],
+    ["⛰️", "🌕", "🐺", "WOLF"],
+    ["🐺", "🎾", "🐕", "DOG"],
+    ["🐕", "🔥", "🌭", "HOT DOG"]
+  ]
 }
 ]
