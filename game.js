@@ -373,6 +373,7 @@ export class Game {
   }
 
   give_me_a_yellow(keyboard) {
+    // TODO: Don't do this if there's only one letter left to guess.
     // submit a guess containing the shadowed letters and one other letter in the wrong position
     // of if we can only put one in the right position, one green letter.
 
@@ -432,7 +433,6 @@ export class Game {
         if (_available_indices.length > 0) yellow_index = _available_indices[0];
         if (is_x && letter_exists_here && yellow_index !== undefined) {
           _yellow_index = yellow_index;
-          // TODO: End this loop?
         }
       });
     });
@@ -449,9 +449,11 @@ export class Game {
         this.entry = keyboard.entry;
       });
       keyboard.type({ target: { textContent: CONST.ENTER_KEY } }, this.word_answer.length);
+      this.entry = keyboard.entry;
       scored_guess = this.submit_guess(keyboard.last_entry);
       keyboard.score_keys(scored_guess);
     }
+    return keyboard;
   }
 
   get text_message() {
