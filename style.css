@@ -357,7 +357,7 @@ h1, h2, h3, {
 }
 
 .between-round-text.show {
-  display: block;
+  /* display: block; */
 }
 
 @media screen and (min-width: 700px) {
