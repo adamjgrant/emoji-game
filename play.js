@@ -55,8 +55,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  document.getElementById("theme-hint").innerHTML = `&ldquo;${todays_game.clue}&rdquo;`;
-
   const tooltip = document.getElementById("tooltip");
   setInterval(() => {
     tooltip.classList.add("show");
