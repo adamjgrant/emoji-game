@@ -1,0 +1,13 @@
+.board {
+  transition: transform 0.5s ease-in-out;
+  transform: scale(1.0);
+}
+
+.row {
+  display: flex;
+}
+
+.cell {
+  padding: 5px;
+  border: 1px solid #e4e4e4;
+}

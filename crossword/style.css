@@ -1,3 +1,5 @@
+@import './modules/board.css';
+
 * { box-sizing: border-box; }
 
 :root {
@@ -46,6 +48,9 @@ body {
 .play-area {
   flex: 1;
   height: calc(100% - var(--status-height));
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .keyboard-open .play-area {

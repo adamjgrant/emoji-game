@@ -21,8 +21,16 @@
   class="interface"
 ><div 
     class="status" id="status"></div><div 
-    class="play-area" id="play_area"></div><div
+    class="play-area" id="play_area"
+    ><div 
+      class="board"
+      id="board"
+    ></div></div><div
     class="keyboard" id="keyboard"></div></div>
+
+<template id="cell">
+  <div class="cell" data-row="0" data-column="0">😀</div>
+</template>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,5 +45,8 @@
 
   gtag('config', 'G-5KBTZEJPSM');
 </script>
+<script src="script.js" type="module"></script>
+
+<script src="board.js" type="module"></script>
 </body>
 </html>
