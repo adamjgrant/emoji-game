@@ -47,6 +47,10 @@ body {
 .play-area {
   background: red;
   flex: 1;
+  height: calc(100% - var(--status-height));
+}
+
+.keyboard-open .play-area {
   height: calc(100% - var(--status-height) - var(--keyboard-height));
 }
 
@@ -54,4 +58,9 @@ body {
   background: orange;
   flex: 1;
   height: var(--keyboard-height);
+  display: none;
+}
+
+.keyboard-open .keyboard {
+  display: block;
 }
