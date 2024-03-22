@@ -2,7 +2,10 @@ import { Board } from './modules/board.js';
 
 const GRID_SIZE = 20;
 
-"keyboard board".split(' ').forEach((class_name) => {
+[
+  "keyboard", 
+  "board"
+].forEach((class_name) => {
   const id_name = class_name.replace(/\-/g, '_');
   window[id_name] = document.getElementById(id_name);
 });
