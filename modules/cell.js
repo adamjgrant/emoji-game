@@ -1,25 +1,45 @@
+const MINIMUM_CHOICES = 19;
+
 export class Cell {
   constructor(row, column, properties = {}) {
     this.row = row;
     this.column = column;
-    this.properties = properties;
+
+    this.answer = properties.answer;
+    this.value = properties.value;
+    this.type = properties.type;
+    this.choices = properties.choices;
+    this.arithmetic = properties.arithmetic;
+
     this.validate();
   }
 
+  get is_fill_in_the_blank() {
+    return (this.type === 'HasValue' && this.value === '');
+  }
+
   validate() {
-    if (this.properties.type === 'HasValue' && this.properties.value === '' && this.properties.answer === '') {
+    if (this.is_fill_in_the_blank && this.answer === '') {
       throw new Error(`Error at cell ${this.row}, ${this.column}: A cell without a value must have an answer`);
     }
 
-    if (this.properties.type === 'HasValue' && this.properties.value === '' && !this.properties.arithmetic) {
+    if (this.is_fill_in_the_blank && !this.arithmetic.length) {
       throw new Error(`Error at cell ${this.row}, ${this.column}: A cell without a value must have an arithmetic operation`);
     }
 
-    if (this.properties.type === 'HasValue' && this.properties.value !== '' && this.properties.answer !== '') {
+    if (this.type === 'HasValue' && this.value !== '' && this.answer !== '') {
       throw new Error(`Error at cell ${this.row}, ${this.column}: A cell with a value cannot have an answer`);
     }
 
-    if (this.properties.type === null && this.properties.value !== undefined) {
+    if (this.is_fill_in_the_blank && this.choices.length < MINIMUM_CHOICES) {
+      throw new Error(`Error at cell ${this.row}, ${this.column}: A cell without a value must have choices`);
+    }
+
+    if (this.is_fill_in_the_blank && !this.choices) {
+      throw new Error(`Error at cell ${this.row}, ${this.column}: A cell without a value must have choices`);
+    }
+
+    if (this.type === null && this.value !== undefined) {
       throw new Error(`Error at cell ${this.row}, ${this.column}: A cell with a value cannot have an arithmetic operation`);
     }
   }

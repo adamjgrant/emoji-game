@@ -50,18 +50,43 @@ by adding the first two. It must also have an answer property.
   "type": "HasValue",
   "value": "",
   "answer": "🌧️",
-  "arithmetic": {
-    "operation": "add",
-    "operands": [
-      {
-        "row": 0,
-        "cell": 0
-      },
-      {
-        "row": 0,
-        "cell": 1
-      }
-    ]
-  }
+  "arithmetic": [
+    {
+      "direction": "h",
+      "operation": "add",
+      "operands": [
+        {
+          "row": 0,
+          "cell": 0
+        },
+        {
+          "row": 0,
+          "cell": 1
+        }
+      ]
+    }
+  ],
+  "choices": [
+    "🌧️",
+    "🌞",
+    "🌪️",
+    "🌈",
+    "🌊",
+    "🌋",
+    "🌎",
+    "🌙",
+    "🌟",
+    "🌠",
+    "🌡️",
+    "🌤️",
+    "🌥️",
+    "🌦️",
+    "🌧️",
+    "🌲",
+    "🌳",
+    "🌴",
+    "🌵",
+    "🌷",
+  ]
 }
 ```
