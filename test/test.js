@@ -1,6 +1,7 @@
 import { Board } from "../modules/board.js"; 
-import pkg from 'mocha';
-const { assert } = pkg;
+// import pkg from 'mocha';
+// const { assert } = pkg;
+import assert from 'assert';
 
 // var assert = require('assert');
 describe('Board', function () {
