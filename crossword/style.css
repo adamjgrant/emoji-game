@@ -39,13 +39,11 @@ body {
 }
 
 .status {
-  background: blue;
   height: var(--status-height);
   max-height: var(--status-height);
 }
 
 .play-area {
-  background: red;
   flex: 1;
   height: calc(100% - var(--status-height));
 }
@@ -55,7 +53,6 @@ body {
 }
 
 .keyboard {
-  background: orange;
   flex: 1;
   height: var(--keyboard-height);
   display: none;

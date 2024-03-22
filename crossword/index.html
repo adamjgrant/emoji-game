@@ -24,20 +24,6 @@
     class="play-area" id="play_area"></div><div
     class="keyboard" id="keyboard"></div></div>
 
-<script>
-  "status play-area keyboard".split` `.forEach(
-    className => {
-      console.log(className);
-      const slug = className.replace(/\-/g, "_");
-      console.log(slug);
-      let thisone = document.getElementById(slug);
-      for (let x=0;x<1000;x++) {
-        thisone.innerHTML += "Lorem ipsum dolor sit amet, consectetur adipiscing elit";
-      }
-    }
-  );
-</script>
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Gorditas:wght@400;700&family=Rancho&display=swap" rel="stylesheet">
