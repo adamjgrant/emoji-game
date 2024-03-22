@@ -1,5 +1,5 @@
 export class Cell {
-  constructor(row, column, properties) {
+  constructor(row, column, properties = {}) {
     this.row = row;
     this.column = column;
     this.properties = properties;
@@ -7,8 +7,8 @@ export class Cell {
   }
 
   validate() {
-    // if (this.type === 'HasValue' && this.value === '' && this.answer === '') {
-    //   throw new Error('Cell must have a value or an answer');
-    // }
+    if (this.properties.type === 'HasValue' && this.properties.value === '' && this.properties.answer === '') {
+      throw new Error(`Error at cell ${this.row}, ${this.column}: A cell without a value must have an answer`);
+    }
   }
 }

@@ -76,6 +76,10 @@ Game.rows[0].cells.push(cell02);
 
 describe('Cell', function () {
   describe('validation', function () {
+    it('should allow cells with HasValue, an empty string, and an answer', function () {
+      assert.doesNotThrow(() => new Cell(0, 0, cell02));
+    });
+
     it('should not allow cells with HasValue, an empty string, but no answer', function () {
       let cell02_bad = cell02;
       cell02_bad.answer = "";
