@@ -1,15 +1,18 @@
 import { Row } from './row.js';
+import { Cell } from './cell.js';
 
 export class Board {
   constructor(grid_size) {
     this.grid_size = grid_size;
-    this.rows = [];
-    this.initialize();
+    this.rows = new Array(grid_size);
+    this.initiate();
   }
 
   register_game(game) {
     game.rows.forEach((row, row_number) => {
-      row.cells.forEach((cell, column_number) => {
+      row.cells.forEach((cell_properties, column_number) => {
+        console.log(row_number, column_number, cell_properties);
+        let cell = new Cell(row_number, column_number, cell_properties);
         this.register_cell_at_row_and_column(cell, row_number, column_number);
       });
     });
@@ -24,14 +27,14 @@ export class Board {
   }
 
   cell_at_row_and_column(row_number, column_number) {
+    const null_cell = new Cell(row_number, column_number, { type: null });
+    if (!this.rows[row_number]) { return null_cell; }
     return this.rows[row_number].cell_at_column(column_number);
   }
 
-  initialize() {
+  initiate() {
     for(let row_number=0;row_number<this.grid_size;row_number++) {
-      let row = new Row(row_number, this.grid_size);
-      this.rows.push(row);
+      this.rows[row_number] = new Row(row_number, this.grid_size);
     }
-    return this.rows;
   }
 }
