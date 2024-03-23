@@ -34,8 +34,11 @@ window.addEventListener('DOMContentLoaded', (event) => {
       const cell = cell_template.content.cloneNode(true);
       const cell_element = cell.firstElementChild;
       const _cell = _board.cell_at_row_and_column(row_number, column_number);
-      cell_element.setAttribute("data-row", row);
+      cell_element.setAttribute("data-row", row_number);
       cell_element.setAttribute("data-column", column_number);
+      if (_cell.is_fill_in_the_blank) {
+        cell_element.classList.add('fill-in-the-blank');
+      }
       const IDEOGRAPHIC_SPACE = "&#12288;";
       if (_cell.type !== null) {
         // Show ideographic space if cell is empty
@@ -49,4 +52,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
     }
     board.appendChild(row);
   }
+
+  const copy_from_template = (template_id) => document.getElementById(template_id).content.cloneNode(true).firstElementChild; 
+  const equation_element = copy_from_template('equation');
+  debugger
+
+  // Toggle and populate keyboard
 });
