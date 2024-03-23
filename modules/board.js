@@ -11,7 +11,6 @@ export class Board {
   register_game(game) {
     game.rows.forEach((row, row_number) => {
       row.cells.forEach((cell_properties, column_number) => {
-        console.log(row_number, column_number, cell_properties);
         let cell = new Cell(row_number, column_number, cell_properties);
         this.register_cell_at_row_and_column(cell, row_number, column_number);
       });

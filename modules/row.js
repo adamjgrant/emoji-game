@@ -1,3 +1,5 @@
+import { Cell } from './cell.js';
+
 export class Row {
   constructor(row_number, row_size) {
     this.row_number = row_number;
@@ -9,7 +11,7 @@ export class Row {
   }
 
   cell_at_column(column_number) {
-    const null_cell = new Cell(row_number, column_number, { type: null });
+    const null_cell = new Cell(this.row_number, column_number, { type: null });
     if (!this.cells[column_number]) { return null_cell; }
     return this.cells[column_number];
   }

@@ -84,10 +84,10 @@ describe('Cell', function () {
       assert.throws(() => new Cell(0, 0, cell01_bad), Error);
     });
 
-    it('should not allow cells with null, but a value', function () {
+    it('should not allow cells with null, and with arithmetic', function () {
       let cell01_bad = structuredClone(cell01);
       cell01_bad.type = null;
-      cell01_bad.value = "☁️";
+      cell01_bad.arithmetic = {};
       assert.throws(() => new Cell(0, 0, cell01_bad), Error);
     });
 

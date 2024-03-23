@@ -45,7 +45,7 @@ export class Cell {
       throw new Error(`Error at cell ${this.row}, ${this.column}: A cell without a value must have choices`);
     }
 
-    if (this.type === null && this.value !== undefined) {
+    if (this.type === null && this.arithmetic !== undefined) {
       throw new Error(`Error at cell ${this.row}, ${this.column}: A cell with a value cannot have an arithmetic operation`);
     }
   }
