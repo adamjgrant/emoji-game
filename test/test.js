@@ -1,4 +1,5 @@
 import { Board } from "../modules/board.js"; 
+import { Row } from "../modules/row.js"; 
 import { Cell } from "../modules/cell.js";
 import assert from 'assert';
 
@@ -11,7 +12,7 @@ describe('Board', function () {
   });
 });
 
-let Game = {
+let game = {
   "rows": [
     { "cells": [] },
     { "cells": [] }
@@ -50,9 +51,19 @@ let cell02 = {
   ],
   "choices": ["🌧️", "🌞", "🌪️", "🌈", "🌊", "🌋", "🌎", "🌙", "🌟", "🌠", "🌡️", "🌤️", "🌥️", "🌦️", "🌧️", "🌲", "🌳", "🌴", "🌵"]
 } 
-Game.rows[0].cells.push(cell00);
-Game.rows[0].cells.push(cell01);
-Game.rows[0].cells.push(cell02);
+game.rows[0].cells.push(cell00);
+game.rows[0].cells.push(cell01);
+game.rows[0].cells.push(cell02);
+
+describe("Row", function() {
+  describe("adding cells", function() {
+    it("should add a cell", function() {
+      let board = new Board(3);
+      board.register_game(game);
+      assert.equal(board.rows[0].cell_at_column(0, 0).value, "☁️");
+    });
+  });
+});
 
 describe('Cell', function () {
   describe('validation', function () {
