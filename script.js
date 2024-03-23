@@ -36,8 +36,14 @@ window.addEventListener('DOMContentLoaded', (event) => {
       const _cell = _board.cell_at_row_and_column(row_number, column_number);
       cell_element.setAttribute("data-row", row);
       cell_element.setAttribute("data-column", column_number);
+      const IDEOGRAPHIC_SPACE = "&#12288;";
       if (_cell.type !== null) {
-        cell_element.innerHTML = _cell.value;
+        // Show ideographic space if cell is empty
+        let value = _cell.value.length ? _cell.value : IDEOGRAPHIC_SPACE;
+        cell_element.innerHTML = value;
+      } else {
+        cell_element.innerHTML = IDEOGRAPHIC_SPACE;
+        cell_element.classList.add('null');
       }
       row.appendChild(cell);
     }

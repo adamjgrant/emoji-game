@@ -6,8 +6,3 @@
 .row {
   display: flex;
 }
-
-.cell {
-  padding: 5px;
-  border: 1px solid #e4e4e4;
-}

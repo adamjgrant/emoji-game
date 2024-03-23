@@ -1,4 +1,5 @@
 @import './modules/board.css';
+@import './modules/cell.css';
 
 * { box-sizing: border-box; }
 
