@@ -1,5 +1,3 @@
-const MINIMUM_CHOICES = 19;
-
 export class Cell {
   constructor(row, column, properties = {}) {
     this.row = row;
@@ -7,7 +5,6 @@ export class Cell {
     this.properties = properties;
     this.answer = properties.answer;
     this.type = properties.type;
-    this.choices = properties.choices;
     this.arithmetic = properties.arithmetic;
 
     this.validate();
@@ -35,14 +32,6 @@ export class Cell {
 
     if (this.type === 'HasValue' && this.value !== '' && this.answer) {
       throw new Error(`Error at cell ${this.row}, ${this.column}: A cell with a value cannot have an answer`);
-    }
-
-    if (this.is_fill_in_the_blank && this.choices.length < MINIMUM_CHOICES) {
-      throw new Error(`Error at cell ${this.row}, ${this.column}: A cell without a value must have choices`);
-    }
-
-    if (this.is_fill_in_the_blank && !this.choices) {
-      throw new Error(`Error at cell ${this.row}, ${this.column}: A cell without a value must have choices`);
     }
 
     if (this.type === null && this.arithmetic !== undefined) {

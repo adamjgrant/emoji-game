@@ -11,9 +11,7 @@ const GRID_SIZE = 20;
   window[id_name] = document.getElementById(id_name);
 });
 const copy_from_template = (template_id) => {
-  console.log(template_id);
   let el = document.getElementById(template_id);
-  console.log(el);
   let cloned_el = el.content.cloneNode(true)
   return cloned_el.firstElementChild; 
 }
@@ -32,6 +30,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
   let _board = new Board(GRID_SIZE);
   _board.register_game(todays_game);
 
+  let possible_answers = [];
+
   // Create a grid of cells
   for(let row_number=0;row_number<GRID_SIZE;row_number++) {
     let row = document.createElement('div');
@@ -47,6 +47,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
       cell_element.setAttribute("data-column", column_number);
       if (_cell.is_fill_in_the_blank) {
         cell_element.classList.add('fill-in-the-blank');
+        possible_answers.push(_cell.answer);
       }
       const IDEOGRAPHIC_SPACE = "&#12288;";
       if (_cell.type !== null) {
@@ -64,6 +65,15 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
   const equation_element = copy_from_template('equation');
   keyboard.appendChild(equation_element);
+
+  const choices_element = copy_from_template('choices');
+  keyboard.appendChild(choices_element);
+  possible_answers.forEach((answer) => {
+    const choice_element = copy_from_template('choice');
+    choice_element.innerHTML = answer;
+    choices_element.appendChild(choice_element);
+  });
+
 
   // Toggle and populate keyboard
   $('.cell.fill-in-the-blank').forEach((cell) => {
