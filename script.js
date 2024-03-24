@@ -10,8 +10,17 @@ const GRID_SIZE = 20;
   const id_name = class_name.replace(/\-/g, '_');
   window[id_name] = document.getElementById(id_name);
 });
-window.addEventListener('DOMContentLoaded', (event) => {
+const copy_from_template = (template_id) => {
+  console.log(template_id);
+  let el = document.getElementById(template_id);
+  console.log(el);
+  let cloned_el = el.content.cloneNode(true)
+  return cloned_el.firstElementChild; 
+}
 
+const $ = (selector) => Array.from(document.querySelectorAll(selector));
+
+window.addEventListener('DOMContentLoaded', (event) => {
   // Get today's date in YYYY-MM-DD format
   let today = new Date();
   let today_string = today.toISOString().split('T')[0];
@@ -53,9 +62,19 @@ window.addEventListener('DOMContentLoaded', (event) => {
     board.appendChild(row);
   }
 
-  const copy_from_template = (template_id) => document.getElementById(template_id).content.cloneNode(true).firstElementChild; 
   const equation_element = copy_from_template('equation');
-  debugger
+  keyboard.appendChild(equation_element);
 
   // Toggle and populate keyboard
+  $('.cell.fill-in-the-blank').forEach((cell) => {
+    cell.addEventListener('click', (event) => {
+      event.stopPropagation();
+      event.preventDefault();
+      document.body.classList.toggle('keyboard-open');
+    });
+  });
+
+  document.body.addEventListener('click', (event) => {
+    document.body.classList.remove('keyboard-open');
+  });
 });

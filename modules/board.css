@@ -3,6 +3,10 @@
   transform: scale(1.0);
 }
 
+.keyboard-open .board {
+  transform: scale(0.7);
+}
+
 .row {
   display: flex;
 }

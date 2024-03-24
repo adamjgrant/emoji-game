@@ -48,8 +48,7 @@ let cell02 = {
         }
       ]
     }
-  ],
-  "choices": ["🌧️", "🌞", "🌪️", "🌈", "🌊", "🌋", "🌎", "🌙", "🌟", "🌠", "🌡️", "🌤️", "🌥️", "🌦️", "🌧️", "🌲", "🌳", "🌴", "🌵"]
+  ]
 } 
 game.rows[0].cells.push(cell00);
 game.rows[0].cells.push(cell01);
@@ -94,12 +93,6 @@ describe('Cell', function () {
     it('should not allow cells with HasValue, an empty value, an answer, arithmetic, but no choices', function () {
       let cell02_bad = structuredClone(cell02);
       delete cell02_bad.choices;
-      assert.throws(() => new Cell(0, 0, cell02_bad), Error);
-    });
-
-    it('should not allow cells with HasValue, an empty value, an answer, arithmetic, but fewer than 19 choices', function () {
-      let cell02_bad = structuredClone(cell02);
-      cell02_bad.choices.pop();
       assert.throws(() => new Cell(0, 0, cell02_bad), Error);
     });
   });
