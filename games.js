@@ -3,7 +3,7 @@ export const games = [
     "date": "2025-01-02",
     "clue": "Starting Fresh",
     "game": [
-      ["✍️", "🕰️", "📕", "BOOK"],                // PEN + TIME = BOOK
+      ["✍️", "🕰️", "📕", "BOOK"],               // PEN + TIME = BOOK
       ["📕", "🍔", "📒", "COOKBOOK"],           // BOOK + FOOD = COOKBOOK
       ["📒", "👱‍♂️", "👨‍🍳", "CHEF"],               // COOKBOOK + PERSON = CHEF
       ["👨‍🍳", "🎥", "📺", "SHOW"],               // CHEF + CAMERA = SHOW
@@ -15,10 +15,10 @@ export const games = [
   "clue": "New Horizons",
   "game": [
     ["🗺️", "🧭", "🌄", "ADVENTURE"],       // MAP + COMPASS = ADVENTURE
-    ["🌄", "👀", "❓", "CURIOSITY"],        // ADVENTURE + LOOK = CURIOSITY
+    ["🌄", "👀", "❓", "CURIOSITY"],       // ADVENTURE + LOOK = CURIOSITY
     ["❓", "🔍", "💡", "IDEA"],            // CURIOSITY + SEARCH = IDEA
     ["💡", "⚙️", "🤖", "MACHINE"],         // IDEA + COG = MACHINE
-    ["🤖", "👨‍🚀", "🚀", "ROCKET"]         // MACHINE + ASTRONAUT = ROCKET
+    ["🤖", "👨‍🚀", "🚀", "ROCKET"]           // MACHINE + ASTRONAUT = ROCKET
   ]
 },
   {
@@ -26,10 +26,10 @@ export const games = [
   "clue": "From Salad to Slice",
   "game": [
     ["🌿", "🔪", "🥗", "SALAD"],         // Leaves + Knife = Salad
-    ["🥗", "🌾", "🥣", "CEREAL"],       // Salad + Grain = Cereal
-    ["🥣", "🍬", "🍪", "COOKIE"],       // Cereal + Sugar = Cookie
-    ["🍪", "🍞", "🏪", "BAKERY"],       // Cookie + Bread = Bakery
-    ["🏪", "🇮🇹", "🍕", "PIZZA"]        // Bakery + Italy = Pizza
+    ["🥗", "🌾", "🥣", "CEREAL"],        // Salad + Grain = Cereal
+    ["🥣", "🍬", "🍪", "COOKIE"],        // Cereal + Sugar = Cookie
+    ["🍪", "🍞", "🏪", "BAKERY"],        // Cookie + Bread = Bakery
+    ["🏪", "🇮🇹", "🍕", "PIZZA"]          // Bakery + Italy = Pizza
   ]
 },
   {
@@ -38,9 +38,9 @@ export const games = [
   "game": [
     ["🛣️", "🚶", "🌍", "JOURNEY"],          // Road + Walking = Journey
     ["🌍", "🧳", "✈️", "TRAVEL"],           // Journey + Luggage = Travel
-    ["✈️", "🌙", "😴", "JETLAG"],          // Flight + Night = Jetlag
-    ["😴", "🏨", "🛏️", "REST"],            // Jetlag + Hotel + Bed = Rest
-    ["🛏️", "💭", "🌈", "DREAM"]           // Bed + Thought + Rainbow = Dream
+    ["✈️", "🌙", "😴", "JETLAG"],           // Flight + Night = Jetlag
+    ["😴", "🏨", "🛏️", "REST"],             // Jetlag + Hotel + Bed = Rest
+    ["🛏️", "💭", "🌈", "DREAM"]             // Bed + Thought + Rainbow = Dream
   ]
 },
   {
@@ -48,10 +48,10 @@ export const games = [
   "clue": "Tale of Two Tacos",
   "game": [
     ["🥑", "🍋", "🥗", "GUACAMOLE"],        // Avocado + Lime = GUACAMOLE
-    ["🥗", "🌽", "🌮", "TACO"],              // GUACAMOLE + Corn = TACO
+    ["🥗", "🌽", "🌮", "TACO"],             // GUACAMOLE + Corn = TACO
     ["🌮", "📄", "📁", "FOLDER"],           // TACO + Paper = FOLDER
-    ["📁", "💍", "📒", "BINDER"],            // FOLDER + Rings = BINDER
-    ["📒", "🖼️", "📔", "ALBUM"]              // BINDER + Photos = ALBUM
+    ["📁", "💍", "📒", "BINDER"],           // FOLDER + Rings = BINDER
+    ["📒", "🖼️", "📔", "ALBUM"]             // BINDER + Photos = ALBUM
   ]
 },
   {
