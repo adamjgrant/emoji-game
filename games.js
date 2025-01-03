@@ -109,6 +109,96 @@ export const games = [
       ["📚", "🎓", "🌟", "ACHIEVEMENT"]
     ]
   },
+  
+  {
+    "date": "2025-01-13",
+    "clue": "Spice of Life",
+    "game": [
+      ["🌶️", "🔥", "😅", "SPICY"],
+      ["😅", "💦", "💧", "SWEAT"],
+      ["💧", "💧", "🌊", "WATER"],
+      ["🌊", "🚢", "⚓", "BOAT"],
+      ["⚓", "💼", "👔", "BUSINESS"]
+    ]
+  },
+  {
+    "date": "2025-01-14",
+    "clue": "Going Viral",
+    "game": [
+      ["💻", "👀", "📱", "SCREEN"],
+      ["📱", "🔊", "🎵", "AUDIO"],
+      ["🎵", "↗️", "🌐", "UPLOAD"],
+      ["🌐", "👥", "📈", "TREND"],
+      ["📈", "🎉", "✨", "CELEBRITY"]
+    ]
+  },
+  {
+    "date": "2025-01-15",
+    "clue": "Sweet Dreams",
+    "game": [
+      ["🌙", "😴", "💤", "SLEEP"],
+      ["💤", "💭", "🌀", "DREAM"],
+      ["🌀", "🔮", "⚗️", "MAGIC"],
+      ["⚗️", "🍫", "🍭", "CANDY"],
+      ["🍭", "😋", "🤩", "DELIGHT"]
+    ]
+  },
+  {
+    "date": "2025-01-16",
+    "clue": "Deep Dive",
+    "game": [
+      ["🌊", "🐟", "🐠", "FISH"],
+      ["🐠", "🏊‍♂️", "🔎", "SEARCH"],
+      ["🔎", "🕵️", "🗝️", "SECRET"],
+      ["🗝️", "🔒", "🧰", "LOCKBOX"],
+      ["🧰", "💡", "💭", "INSPIRATION"]
+    ]
+  },
+  {
+    "date": "2025-01-17",
+    "clue": "Under the Weather",
+    "game": [
+      ["🌧️", "☂️", "😷", "COLD"],
+      ["😷", "💊", "🤒", "SICK"],
+      ["🤒", "🥣", "🍯", "REMEDY"],
+      ["🍯", "🍋", "☕", "TEA"],
+      ["☕", "🛋️", "📺", "RELAX"]
+    ]
+  },
+  {
+    "date": "2025-01-18",
+    "clue": "Night at the Theater",
+    "game": [
+      ["🎭", "🎟️", "👀", "SHOW"],
+      ["👀", "🤔", "🎨", "ART"],
+      ["🎨", "🖌️", "📜", "CANVAS"],
+      ["📜", "✂️", "🎀", "RIBBON"],
+      ["🎀", "🎁", "🎉", "CELEBRATION"]
+    ]
+  },
+  {
+    "date": "2025-01-19",
+    "clue": "Overtime Grind",
+    "game": [
+      ["⌚", "📆", "⏳", "TIME"],
+      ["⏳", "💻", "⌨️", "WORK"],
+      ["⌨️", "⚠️", "😩", "STRESS"],
+      ["😩", "☕", "🔥", "ENERGY"],
+      ["🔥", "🏅", "🎉", "SUCCESS"]
+    ]
+  },
+  {
+    "date": "2025-01-20",
+    "clue": "Skyscraper Views",
+    "game": [
+      ["🏙️", "🏗️", "📐", "DESIGN"],
+      ["📐", "🏢", "🌆", "CITY"],
+      ["🌆", "🌃", "🌉", "NIGHTLIFE"],
+      ["🌉", "🎇", "🎆", "FIREWORKS"],
+      ["🎆", "📸", "🖼️", "MEMORY"]
+    ]
+  },
+  
   {
     "date": "2025-03-01",
     "clue": "Love is in the air",
