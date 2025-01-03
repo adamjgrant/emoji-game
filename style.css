@@ -420,15 +420,16 @@ h1, h2, h3, {
   justify-content: center;
   align-items: center;
   padding: 0.5rem;
-  background-color: rgba(255, 255, 255, 0.736);
+  background-color: rgba(255, 255, 255, 1);
   border-radius: 0.5rem;
-  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.15);
   display: none;
   position: absolute;
   position: absolute;
   top: 210px;
   left: 20px;
   right: 20px;
+  transform: rotate(-3deg);
 }
 
 .hint-card-close {
