@@ -33,27 +33,27 @@ export const games = [
   ]
 },
   {
-    "date": "2025-01-05",
-    "clue": "The Road Less Traveled",
-    "game": [
-      ["🛣️", "🚶", "🌍", "JOURNEY"],
-      ["🌍", "🧳", "✈️", "TRAVEL"],
-      ["✈️", "⏰", "⌛", "DELAY"],
-      ["⌛", "🏨", "🛏️", "REST"],
-      ["🛏️", "💭", "🌈", "DREAM"]
-    ]
-  },
+  "date": "2025-01-05",
+  "clue": "The Road Less Traveled",
+  "game": [
+    ["🛣️", "🚶", "🌍", "JOURNEY"],          // Road + Walking = Journey
+    ["🌍", "🧳", "✈️", "TRAVEL"],           // Journey + Luggage = Travel
+    ["✈️", "🌙", "😴", "JETLAG"],          // Flight + Night = Jetlag
+    ["😴", "🏨", "🛏️", "REST"],            // Jetlag + Hotel + Bed = Rest
+    ["🛏️", "💭", "🌈", "DREAM"]           // Bed + Thought + Rainbow = Dream
+  ]
+},
   {
-    "date": "2025-01-06",
-    "clue": "Tale of Two Tacos",
-    "game": [
-      ["🌮", "2️⃣", "🥑", "GUACAMOLE"],
-      ["🥑", "🍅", "🧅", "SALSA"],
-      ["🧅", "😢", "👁️", "TEAR"],
-      ["👁️", "🔍", "🕵️", "INVESTIGATE"],
-      ["🕵️", "💬", "❗", "ALERT"]
-    ]
-  },
+  "date": "2025-01-06",
+  "clue": "Tale of Two Tacos",
+  "game": [
+    ["🥑", "🍋", "🥗", "GUACAMOLE"],        // Avocado + Lime = GUACAMOLE
+    ["🥗", "🌽", "🌮", "TACO"],              // GUACAMOLE + Corn = TACO
+    ["🌮", "📄", "📁", "FOLDER"],           // TACO + Paper = FOLDER
+    ["📁", "💍", "📒", "BINDER"],            // FOLDER + Rings = BINDER
+    ["📒", "🖼️", "📔", "ALBUM"]              // BINDER + Photos = ALBUM
+  ]
+},
   {
     "date": "2025-01-07",
     "clue": "A Star is Born",
