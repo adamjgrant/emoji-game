@@ -1,5 +1,115 @@
 export const games = [
   {
+    "date": "2025-01-03",
+    "clue": "New Horizons",
+    "game": [
+      ["🗺️", "🧭", "🌄", "ADVENTURE"],
+      ["🌄", "👀", "❓", "CURIOSITY"],
+      ["❓", "🔍", "💡", "IDEA"],
+      ["💡", "🎈", "🆕", "INNOVATION"],
+      ["🆕", "👨‍🚀", "🌌", "SPACE"]
+    ]
+  },
+  {
+    "date": "2025-01-04",
+    "clue": "Heat of the Kitchen",
+    "game": [
+      ["🥔", "🔪", "🥣", "COOK"],
+      ["🥣", "🔥", "🍜", "SOUP"],
+      ["🍜", "🌶️", "😰", "SPICY"],
+      ["😰", "💦", "💧", "SWEAT"],
+      ["💧", "🏃", "🚰", "HYDRATE"]
+    ]
+  },
+  {
+    "date": "2025-01-05",
+    "clue": "The Road Less Traveled",
+    "game": [
+      ["🛣️", "🚶", "🌍", "JOURNEY"],
+      ["🌍", "🧳", "✈️", "TRAVEL"],
+      ["✈️", "⏰", "⌛", "DELAY"],
+      ["⌛", "🏨", "🛏️", "REST"],
+      ["🛏️", "💭", "🌈", "DREAM"]
+    ]
+  },
+  {
+    "date": "2025-01-06",
+    "clue": "Tale of Two Tacos",
+    "game": [
+      ["🌮", "2️⃣", "🥑", "GUACAMOLE"],
+      ["🥑", "🍅", "🧅", "SALSA"],
+      ["🧅", "😢", "👁️", "TEAR"],
+      ["👁️", "🔍", "🕵️", "INVESTIGATE"],
+      ["🕵️", "💬", "❗", "ALERT"]
+    ]
+  },
+  {
+    "date": "2025-01-07",
+    "clue": "A Star is Born",
+    "game": [
+      ["🌠", "✨", "🔭", "STAR"],
+      ["🔭", "💭", "🤔", "THOUGHT"],
+      ["🤔", "💬", "🎨", "IMAGINE"],
+      ["🎨", "🖌️", "🖼️", "ART"],
+      ["🖼️", "🌟", "🎉", "FAME"]
+    ]
+  },
+  {
+    "date": "2025-01-08",
+    "clue": "Hardwired",
+    "game": [
+      ["🧠", "⚙️", "🤖", "ROBOT"],
+      ["🤖", "🔌", "⚡", "POWER"],
+      ["⚡", "💻", "🖱️", "COMPUTER"],
+      ["🖱️", "🕹️", "🎮", "GAMING"],
+      ["🎮", "👾", "🏆", "VICTORY"]
+    ]
+  },
+  {
+    "date": "2025-01-09",
+    "clue": "Chasing Rainbows",
+    "game": [
+      ["🌧️", "☀️", "🌈", "RAINBOW"],
+      ["🌈", "🏃", "🦄", "FANTASY"],
+      ["🦄", "✨", "💭", "DREAM"],
+      ["💭", "💎", "🌟", "GEM"],
+      ["🌟", "🚀", "💫", "COSMOS"]
+    ]
+  },
+  {
+    "date": "2025-01-10",
+    "clue": "The Feline Factor",
+    "game": [
+      ["🐱", "🐈", "🐾", "CAT"],
+      ["🐾", "🐭", "🏆", "VICTORY"],
+      ["🏆", "🎉", "🙌", "CELEBRATE"],
+      ["🙌", "😺", "🎶", "MELODY"],
+      ["🎶", "🌀", "🎧", "MIXTAPE"]
+    ]
+  },
+  {
+    "date": "2025-01-11",
+    "clue": "Hitting the Slopes",
+    "game": [
+      ["🏔️", "❄️", "⛷️", "SKI"],
+      ["⛷️", "🎿", "🏂", "SNOWBOARD"],
+      ["🏂", "⏱️", "🏆", "RACE"],
+      ["🏆", "🎉", "🔥", "CELEBRATION"],
+      ["🔥", "🍫", "🍡", "SMORES"]
+    ]
+  },
+  {
+    "date": "2025-01-12",
+    "clue": "Brushing Up",
+    "game": [
+      ["🖌️", "🎨", "🖼️", "PAINTING"],
+      ["🖼️", "💭", "💡", "IDEA"],
+      ["💡", "📝", "✍️", "WRITING"],
+      ["✍️", "📖", "📚", "BOOKS"],
+      ["📚", "🎓", "🌟", "ACHIEVEMENT"]
+    ]
+  },
+  {
     "date": "2025-03-01",
     "clue": "Love is in the air",
     "game": [
