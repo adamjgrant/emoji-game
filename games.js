@@ -11,27 +11,27 @@ export const games = [
     ]
   },
   {
-    "date": "2025-01-03",
-    "clue": "New Horizons",
-    "game": [
-      ["🗺️", "🧭", "🌄", "ADVENTURE"],
-      ["🌄", "👀", "❓", "CURIOSITY"],
-      ["❓", "🔍", "💡", "IDEA"],
-      ["💡", "🎈", "🆕", "INNOVATION"],
-      ["🆕", "👨‍🚀", "🌌", "SPACE"]
-    ]
-  },
+  "date": "2025-01-03",
+  "clue": "New Horizons",
+  "game": [
+    ["🗺️", "🧭", "🌄", "ADVENTURE"],       // MAP + COMPASS = ADVENTURE
+    ["🌄", "👀", "❓", "CURIOSITY"],        // ADVENTURE + LOOK = CURIOSITY
+    ["❓", "🔍", "💡", "IDEA"],            // CURIOSITY + SEARCH = IDEA
+    ["💡", "⚙️", "🤖", "MACHINE"],         // IDEA + COG = MACHINE
+    ["🤖", "👨‍🚀", "🚀", "ROCKET"]         // MACHINE + ASTRONAUT = ROCKET
+  ]
+},
   {
-    "date": "2025-01-04",
-    "clue": "Heat of the Kitchen",
-    "game": [
-      ["🥔", "🔪", "🥣", "COOK"],
-      ["🥣", "🔥", "🍜", "SOUP"],
-      ["🍜", "🌶️", "😰", "SPICY"],
-      ["😰", "💦", "💧", "SWEAT"],
-      ["💧", "🏃", "🚰", "HYDRATE"]
-    ]
-  },
+  "date": "2025-01-04",
+  "clue": "From Salad to Slice",
+  "game": [
+    ["🌿", "🔪", "🥗", "SALAD"],         // Leaves + Knife = Salad
+    ["🥗", "🌾", "🥣", "CEREAL"],       // Salad + Grain = Cereal
+    ["🥣", "🍬", "🍪", "COOKIE"],       // Cereal + Sugar = Cookie
+    ["🍪", "🍞", "🏪", "BAKERY"],       // Cookie + Bread = Bakery
+    ["🏪", "🇮🇹", "🍕", "PIZZA"]        // Bakery + Italy = Pizza
+  ]
+},
   {
     "date": "2025-01-05",
     "clue": "The Road Less Traveled",
