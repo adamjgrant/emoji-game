@@ -29,6 +29,15 @@
 <template id="game-entry-spacer">
   <div class="spacer"></div>
 </template>
+  
+<template id="hint-card">
+  <div class="hint-card">
+    <button class="hint-card-close">&times;</button>
+    <h1 class="hint-card-title"></h2>
+    <img class="hint-card-image" src="" />
+    <p class="hint-card-text"></p>
+  </div>
+</template>
 
 <div class="interface">
   <div class="game-board">
@@ -45,6 +54,7 @@
   <script src="game.js" type="module"></script>
   <script src="games.js" type="module"></script>
   <script src="play.js" type="module"></script>
+  <script src="hint_card.js" type="module"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Gorditas:wght@400;700&family=Rancho&display=swap" rel="stylesheet">

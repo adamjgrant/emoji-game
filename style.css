@@ -32,6 +32,7 @@ h1, h2, h3, {
   padding: 0;
   margin: 0;
   overflow: auto;
+  position: relative;
 }
 
 .tooltip {
@@ -406,4 +407,46 @@ h1, h2, h3, {
   .entry-zone.main .shadow:after {
     opacity: 0.35;
   }
+}
+
+/* HINT CARDS */
+
+.hint-card {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.736);
+  border-radius: 0.5rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+  display: none;
+  position: absolute;
+  position: absolute;
+  top: 210px;
+  left: 20px;
+  right: 20px;
+}
+
+.hint-card-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-size: 1.75rem;
+}
+
+.hint-card-title {
+  margin: 0;
+  margin-bottom: 15px;
+  font-size: 1.25rem;
+}
+
+.hint-card-image {
+  max-height: 115px;
+}
+
+.hint-card-1 [data-hint-card="1"] {
+  display: flex;
 }
