@@ -1,5 +1,5 @@
 let HINT_CARD_INDEX = 0;
-const HINT_CARDS = ["random-letters"];
+let HINT_CARDS = [];
 
 export const hint_card = {
   show() {
@@ -29,12 +29,21 @@ export const hint_card = {
     card_element.querySelector(".hint-card-close").addEventListener("click", () => {
       this.hide_all();
     });
+    return options.title;
   }
 }
+HINT_CARDS = [
+  hint_card.create({
+    title: "Stuck?",
+    image: "random-letters.jpg",
+    text: "Submit random letters to see what sticks.",
+    id: 1
+  }),
 
-hint_card.create({
-  title: "Stuck?",
-  image: "random-letters.jpg",
-  text: "Submit random letters to see what sticks.",
-  id: 1
-});
+  hint_card.create({
+    title: "Use hints",
+    image: "hint-letters.jpg",
+    text: "Look closely. Faded letters give away missing letters.",
+    id: 2
+  }),
+];

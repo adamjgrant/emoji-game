@@ -302,6 +302,10 @@ h1, h2, h3, {
   .entry-zone .spacer {
     background: #555;
   }
+
+  .hint-card {
+    color: black;
+  }
 }
 
 /* Autocheat */
@@ -415,7 +419,7 @@ h1, h2, h3, {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
+  padding: 0.5rem;
   background-color: rgba(255, 255, 255, 0.736);
   border-radius: 0.5rem;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
@@ -444,9 +448,19 @@ h1, h2, h3, {
 }
 
 .hint-card-image {
-  max-height: 115px;
+  max-height: 100px;
+}
+
+.hint-card-text {
+  margin-bottom: 0;
 }
 
 .hint-card-1 [data-hint-card="1"] {
+  display: flex;
+}
+.hint-card-2 [data-hint-card="2"] {
+  display: flex;
+}
+.hint-card-3 [data-hint-card="3"] {
   display: flex;
 }
