@@ -1,10 +1,13 @@
 let HINT_CARD_INDEX = 0;
 let HINT_CARDS = [];
+const INTERVAL_TIMER = 60 * 1000;
+let interval;
 
 export const hint_card = {
   show() {
+    this.hide_all();
     HINT_CARD_INDEX += 1;
-    if (HINT_CARD_INDEX > HINT_CARDS.length - 1) { HINT_CARD_INDEX = 1; }
+    if (HINT_CARD_INDEX > HINT_CARDS.length) { HINT_CARD_INDEX = 1; }
     document.body.classList.add(`hint-card-${HINT_CARD_INDEX}`);
   },
 
@@ -15,6 +18,10 @@ export const hint_card = {
         document.body.classList.remove(className);
       }
     });
+    window.clearInterval(interval);
+    interval = window.setInterval(() => {
+      this.show();
+    }, INTERVAL_TIMER);
   },
 
   create(options) {
@@ -32,6 +39,7 @@ export const hint_card = {
     return options.title;
   }
 }
+
 HINT_CARDS = [
   hint_card.create({
     title: "Stuck?",
@@ -47,3 +55,5 @@ HINT_CARDS = [
     id: 2
   }),
 ];
+
+hint_card.hide_all();

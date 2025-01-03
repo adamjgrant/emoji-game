@@ -3,7 +3,6 @@ import { hint_card } from "./hint_card.js";
 
 const TIME_TO_CELEBRATE = 2000;
 const MAX_NUMBER_OF_TRIES = 5;
-const IDLE_TIMER_IN_MS = 15 * 1000;
 
 export class Game {
   constructor(game) {
@@ -81,7 +80,6 @@ export class Game {
     this.number_of_tries_in_round = 0;
     this.auto_cheat();
     document.getElementById("active-round").innerText = this.active_round;
-    setInterval(hint_card.show, IDLE_TIMER_IN_MS);
   }
 
   get spacers() {
