@@ -123,26 +123,26 @@ export const games = [
   
   {
     "date": "2025-01-13",
-    "clue": "Spice of Life",
+    "clue": "A World Within Pages",
     "game": [
-      ["🌶️", "🔥", "😅", "SPICY"],
-      ["😅", "💦", "💧", "SWEAT"],
-      ["💧", "💧", "🌊", "WATER"],
-      ["🌊", "🚢", "⚓", "BOAT"],
-      ["⚓", "💼", "👔", "BUSINESS"]
+      ["🌍", "💧", "🌳", "TREE"],
+      ["🌳", "🪓", "🪵", "WOOD"],
+      ["🪵", "⚙️", "🧻", "PAPER"],
+      ["🧻", "🖋️", "📄", "PAGES"],
+      ["📄", "🛡️", "📖", "BOOK"]
     ]
-  },
+},
   {
     "date": "2025-01-14",
-    "clue": "Going Viral",
+    "clue": "A Light in the Darkness",
     "game": [
-      ["💻", "👀", "📱", "SCREEN"],
-      ["📱", "🔊", "🎵", "AUDIO"],
-      ["🎵", "↗️", "🌐", "UPLOAD"],
-      ["🌐", "👥", "📈", "TREND"],
-      ["📈", "🎉", "✨", "CELEBRITY"]
+      ["✨", "⚛️", "☀️", "SUN"],
+      ["☀️", "🌍", "🌿", "PLANTS"],
+      ["🌿", "🧲", "🛢️", "OIL"],
+      ["🛢️", "🔥", "🧼", "WAX"],
+      ["🧼", "🧵", "🕯️", "CANDLE"]
     ]
-  },
+},
   {
     "date": "2025-01-15",
     "clue": "Sweet Dreams",
