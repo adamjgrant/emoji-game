@@ -77,16 +77,16 @@ export const games = [
   ]
 },
   {
-    "date": "2025-01-09",
-    "clue": "Chasing Rainbows",
-    "game": [
-      ["🌧️", "☀️", "🌈", "RAINBOW"],
-      ["🌈", "🏃", "🦄", "FANTASY"],
-      ["🦄", "✨", "💭", "DREAM"],
-      ["💭", "💎", "🌟", "GEM"],
-      ["🌟", "🚀", "💫", "COSMOS"]
-    ]
-  },
+  "date": "2025-01-09",
+  "clue": "Chasing Rainbows",
+  "game": [
+    ["🌧️", "☀️", "🌈", "RAINBOW"],              // Rain + Sun = Rainbow
+    ["🌈", "🖌️", "🎨", "PAINT"],                 // Rainbow + Brush = Paint
+    ["🎨", "🪨", "🛣️", "ROAD"],                  // Paint + Rock = Road
+    ["🛣️", "🚗", "🏡", "DRIVEWAY"],              // Road + Car = Driveway
+    ["🏡", "🔑", "🏠", "HOME"]                     // Driveway + Key = Home
+  ]
+},
   {
     "date": "2025-01-10",
     "clue": "The Feline Factor",
