@@ -1,6 +1,6 @@
 let HINT_CARD_INDEX = 0;
 let HINT_CARDS = [];
-const INTERVAL_TIMER = 60 * 1000;
+const INTERVAL_TIMER = 30 * 1000;
 let interval;
 
 export const hint_card = {
@@ -57,3 +57,4 @@ HINT_CARDS = [
 ];
 
 hint_card.hide_all();
+hint_card.show();

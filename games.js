@@ -11,16 +11,16 @@ export const games = [
     ]
   },
   {
-  "date": "2025-01-03",
-  "clue": "New Horizons",
-  "game": [
-    ["🗺️", "🧭", "🌄", "ADVENTURE"],       // MAP + COMPASS = ADVENTURE
-    ["🌄", "👀", "❓", "CURIOSITY"],       // ADVENTURE + LOOK = CURIOSITY
-    ["❓", "🔍", "💡", "IDEA"],            // CURIOSITY + SEARCH = IDEA
-    ["💡", "⚙️", "🤖", "MACHINE"],         // IDEA + COG = MACHINE
-    ["🤖", "👨‍🚀", "🚀", "ROCKET"]           // MACHINE + ASTRONAUT = ROCKET
-  ]
-},
+    "date": "2025-01-03",
+    "clue": "Starting Fresh",
+    "game": [
+      ["✍️", "🕰️", "📕", "BOOK"],                // PEN + TIME = BOOK
+      ["📕", "🍔", "📒", "COOKBOOK"],           // BOOK + FOOD = COOKBOOK
+      ["📒", "👱‍♂️", "👨‍🍳", "CHEF"],               // COOKBOOK + PERSON = CHEF
+      ["👨‍🍳", "🎥", "📺", "SHOW"],               // CHEF + CAMERA = SHOW
+      ["📺", "🎤", "🎶", "CONCERT"]             // SHOW + MICROPHONE = CONCERT
+    ]
+  },
   {
   "date": "2025-01-04",
   "clue": "From Salad to Slice",
@@ -145,13 +145,13 @@ export const games = [
 },
   {
     "date": "2025-01-15",
-    "clue": "Sweet Dreams",
+    "clue": "New Horizons",
     "game": [
-      ["🌙", "😴", "💤", "SLEEP"],
-      ["💤", "💭", "🌀", "DREAM"],
-      ["🌀", "🔮", "⚗️", "MAGIC"],
-      ["⚗️", "🍫", "🍭", "CANDY"],
-      ["🍭", "😋", "🤩", "DELIGHT"]
+      ["🗺️", "🧭", "🌄", "ADVENTURE"],       // MAP + COMPASS = ADVENTURE
+      ["🌄", "👀", "❓", "CURIOSITY"],       // ADVENTURE + LOOK = CURIOSITY
+      ["❓", "🔍", "💡", "IDEA"],            // CURIOSITY + SEARCH = IDEA
+      ["💡", "⚙️", "🤖", "MACHINE"],         // IDEA + COG = MACHINE
+      ["🤖", "👨‍🚀", "🚀", "ROCKET"]           // MACHINE + ASTRONAUT = ROCKET
     ]
   },
   {
