@@ -89,37 +89,37 @@ export const games = [
 },
   {
     "date": "2025-01-10",
-    "clue": "The Feline Factor",
+    "clue": "Vroom Vroom",
     "game": [
-      ["🐱", "🐈", "🐾", "CAT"],
-      ["🐾", "🐭", "🏆", "VICTORY"],
-      ["🏆", "🎉", "🙌", "CELEBRATE"],
-      ["🙌", "😺", "🎶", "MELODY"],
-      ["🎶", "🌀", "🎧", "MIXTAPE"]
+      ["🌎", "⏳", "🪨", "ROCK"],
+      ["🪨", "👷", "⛏️", "ORE"],
+      ["⛏️", "🔥", "⚙️", "METAL"],
+      ["⚙️", "🛢️", "🛠️", "ENGINE"],
+      ["🛠️", "🛞", "🚗", "CAR"]
     ]
-  },
+},
   {
     "date": "2025-01-11",
-    "clue": "Hitting the Slopes",
+    "clue": "A Place To Call Your Own",
     "game": [
-      ["🏔️", "❄️", "⛷️", "SKI"],
-      ["⛷️", "🎿", "🏂", "SNOWBOARD"],
-      ["🏂", "⏱️", "🏆", "RACE"],
-      ["🏆", "🎉", "🔥", "CELEBRATION"],
-      ["🔥", "🍫", "🍡", "SMORES"]
+      ["🪐", "💥", "☄️", "COMET"],
+      ["☄️", "🌎", "🪨", "ROCK"],
+      ["🪨", "🪵", "🪓", "AXE"],
+      ["🪓", "🌳", "🪵","WOOD"],
+      ["🪵", "🔨", "🏡", "HOUSE"]
     ]
   },
   {
     "date": "2025-01-12",
-    "clue": "Brushing Up",
+    "clue": "A Tall, Green Friend",
     "game": [
-      ["🖌️", "🎨", "🖼️", "PAINTING"],
-      ["🖼️", "💭", "💡", "IDEA"],
-      ["💡", "📝", "✍️", "WRITING"],
-      ["✍️", "📖", "📚", "BOOKS"],
-      ["📚", "🎓", "🌟", "ACHIEVEMENT"]
+      ["✨", "🌑", "🌌", "SPACE"],
+      ["🌌", "☀️", "🌍", "EARTH"],
+      ["🌍", "🧬", "🌎", "SOIL"],
+      ["🌎", "💧", "🌱", "ROOTS"],
+      ["🌱", "🪵", "🌳", "TREE"]
     ]
-  },
+},
   
   {
     "date": "2025-01-13",
