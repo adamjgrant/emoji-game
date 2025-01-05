@@ -55,27 +55,27 @@ export const games = [
   ]
 },
   {
-    "date": "2025-01-07",
-    "clue": "A Star is Born",
-    "game": [
-      ["🌠", "✨", "🔭", "STAR"],
-      ["🔭", "💭", "🤔", "THOUGHT"],
-      ["🤔", "💬", "🎨", "IMAGINE"],
-      ["🎨", "🖌️", "🖼️", "ART"],
-      ["🖼️", "🌟", "🎉", "FAME"]
-    ]
-  },
+  "date": "2025-01-07",
+  "clue": "From Forest to Furniture",
+  "game": [
+    ["🌳", "🪓", "🪵", "LOG"],                      // Tree + Axe = Log
+    ["🪵", "🪚", "📏", "PLANK"],                    // Log + Saw = Plank
+    ["📏", "🔨", "🪑", "CHAIR"],                    // Plank + Hammer = Chair
+    ["🪑", "🕳️", "🚽", "TOILET"],                  // Chair + Hole = Toilet
+    ["🚽", "📄", "🧻", "TOILET PAPER"]               // Toilet + Paper = Toilet Paper
+  ]
+},
   {
-    "date": "2025-01-08",
-    "clue": "Hardwired",
-    "game": [
-      ["🧠", "⚙️", "🤖", "ROBOT"],
-      ["🤖", "🔌", "⚡", "POWER"],
-      ["⚡", "💻", "🖱️", "COMPUTER"],
-      ["🖱️", "🕹️", "🎮", "GAMING"],
-      ["🎮", "👾", "🏆", "VICTORY"]
-    ]
-  },
+  "date": "2025-01-08",
+  "clue": "From Vineyard to Celebration",
+  "game": [
+    ["🍇", "🕰️", "🍷", "WINE"],                  // Grapes + Time = Wine
+    ["🍷", "🧀", "🎉", "PARTY"],                 // Wine + Cheese = Party
+    ["🎉", "🐘", "👔", "REPUBLICAN"],             // Party + Elephant + Suit = Republican
+    ["👔", "📄", "🗳️", "VOTE"],                  // Suit + Paper + Ballot Box = Vote
+    ["🗳️", "🏆", "🦅", "PRESIDENT"]              // Vote + Trophy + Eagle = President
+  ]
+},
   {
     "date": "2025-01-09",
     "clue": "Chasing Rainbows",
